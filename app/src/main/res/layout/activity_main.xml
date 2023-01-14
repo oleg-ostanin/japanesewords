@@ -7,8 +7,8 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <TextView
-            android:layout_width="327dp"
-            android:layout_height="38dp"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
             android:text="Hello World!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -17,7 +17,7 @@
             app:layout_constraintVertical_bias="0.077" android:id="@+id/textView0"/>
     <TextView
             android:text="TextView"
-            android:layout_width="321dp"
+            android:layout_width="320dp"
             android:layout_height="43dp" android:id="@+id/textView1"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="44dp"
             android:layout_marginTop="19dp" app:layout_constraintTop_toBottomOf="@+id/textView0"
@@ -26,38 +26,38 @@
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
     <Button
             android:text="Button"
-            android:layout_width="323dp"
+            android:layout_width="320dp"
             android:layout_height="48dp" android:id="@+id/button0"
             android:onClick="button0"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="44dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="473dp"
-            android:layout_marginEnd="44dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"/>
     <Button
             android:text="Button"
-            android:layout_width="324dp"
+            android:layout_width="320dp"
             android:layout_height="48dp" android:id="@+id/button1"
             android:onClick="button1"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="47dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/button0"
-            android:layout_marginEnd="40dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="418dp"/>
     <Button
             android:text="Button"
-            android:layout_width="330dp"
+            android:layout_width="320dp"
             android:layout_height="48dp" android:id="@+id/button2"
             android:onClick="button2"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="44dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="370dp"
-            android:layout_marginEnd="37dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="6dp"
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="6dp"
             app:layout_constraintTop_toBottomOf="@+id/button1"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
-            android:layout_height="50dp" android:id="@+id/button3"
+            android:layout_height="48dp" android:id="@+id/button3"
             android:onClick="button3"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="48dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="305dp"
             android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/button2"
-            android:layout_marginEnd="43dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
