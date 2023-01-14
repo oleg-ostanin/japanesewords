@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
         kana.setTextSize(32F);
         romaji.setTextSize(32F);
-        romaji.setTextColor(3);
+        romaji.setVisibility(View.VISIBLE);
+
+        //romaji.setTextColor(3);
 
         setContext(0);
     }
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (i == correctButton) {
                 kana.setText(model.getKana());
-//                romaji.setText(model.getRomaji());
+                romaji.setText(model.getRomaji());
             }
         }
 
