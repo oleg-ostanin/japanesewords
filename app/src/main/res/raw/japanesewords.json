@@ -1,0 +1,3827 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "People",
+      "words": [
+        {
+          "id": 0,
+          "kana": "にんげん",
+          "kanji": "人間",
+          "english": "human",
+          "romaji": "ningen"
+        },
+        {
+          "id": 1,
+          "kana": "じんるい",
+          "kanji": "人類",
+          "english": "humanity",
+          "romaji": "jinrui"
+        },
+        {
+          "id": 2,
+          "kana": "ひと",
+          "kanji": "人",
+          "english": "person",
+          "romaji": "hito"
+        },
+        {
+          "id": 3,
+          "kana": "おとこ",
+          "kanji": "男",
+          "english": "male",
+          "romaji": "otoko"
+        },
+        {
+          "id": 4,
+          "kana": "おとこのひと",
+          "kanji": "男の人",
+          "english": "man",
+          "romaji": "otokonohito"
+        },
+        {
+          "id": 5,
+          "kana": "おとこのこ",
+          "kanji": "男の子",
+          "english": "boy",
+          "romaji": "otokonoko"
+        },
+        {
+          "id": 6,
+          "kana": "おんな",
+          "kanji": "女",
+          "english": "female",
+          "romaji": "onna"
+        },
+        {
+          "id": 7,
+          "kana": "おんなのひと",
+          "kanji": "女の人",
+          "english": "woman",
+          "romaji": "onnanohito"
+        },
+        {
+          "id": 8,
+          "kana": "おんなのこ",
+          "kanji": "女の子",
+          "english": "girl",
+          "romaji": "onnanoko"
+        },
+        {
+          "id": 9,
+          "kana": "あかちゃん",
+          "kanji": "赤ちゃん",
+          "english": "baby",
+          "romaji": "akachan"
+        },
+        {
+          "id": 10,
+          "kana": "わかもの",
+          "kanji": "若者",
+          "english": "youth, young person",
+          "romaji": "wakamono"
+        },
+        {
+          "id": 11,
+          "kana": "わたし",
+          "kanji": "私",
+          "english": "I, myself",
+          "romaji": "watashi"
+        },
+        {
+          "id": 12,
+          "kana": "わたくし",
+          "kanji": "私",
+          "english": "I, myself",
+          "romaji": "watakushi"
+        },
+        {
+          "id": 13,
+          "kana": "ぼく",
+          "kanji": "僕",
+          "english": "I, myself",
+          "romaji": "boku"
+        },
+        {
+          "id": 14,
+          "kana": "おれ",
+          "kanji": "俺",
+          "english": "I, myself",
+          "romaji": "ore"
+        },
+        {
+          "id": 15,
+          "kana": "あたし",
+          "kanji": "私",
+          "english": "I, myself",
+          "romaji": "atashi"
+        },
+        {
+          "id": 16,
+          "kana": "しょうじょ",
+          "kanji": "少女",
+          "english": "girl",
+          "romaji": "shoujo"
+        },
+        {
+          "id": 17,
+          "kana": "しょうねん",
+          "kanji": "少年",
+          "english": "boy",
+          "romaji": "shounen"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Occupations",
+      "words": [
+        {
+          "id": 18,
+          "kana": "いしゃ",
+          "kanji": "医者",
+          "english": "doctor",
+          "romaji": "isha"
+        },
+        {
+          "id": 19,
+          "kana": "かんごし",
+          "kanji": "看護師",
+          "english": "nurse",
+          "romaji": "kangoshi"
+        },
+        {
+          "id": 20,
+          "kana": "かんごふ",
+          "kanji": "看護婦",
+          "english": "female nurse",
+          "romaji": "kangofu"
+        },
+        {
+          "id": 21,
+          "kana": "せいじか",
+          "kanji": "政治家",
+          "english": "politician",
+          "romaji": "seijika"
+        },
+        {
+          "id": 22,
+          "kana": "べんごし",
+          "kanji": "弁護士",
+          "english": "lawyer",
+          "romaji": "bengoshi"
+        },
+        {
+          "id": 23,
+          "kana": "しょうぼうし",
+          "kanji": "消防士",
+          "english": "firefighter",
+          "romaji": "shouboushi"
+        },
+        {
+          "id": 24,
+          "kana": "けいさつかん",
+          "kanji": "警察官",
+          "english": "police officer",
+          "romaji": "keisatsukan"
+        },
+        {
+          "id": 25,
+          "kana": "へいし",
+          "kanji": "兵士",
+          "english": "soldier",
+          "romaji": "heishi"
+        },
+        {
+          "id": 26,
+          "kana": "けんちくか",
+          "kanji": "建築家",
+          "english": "architect",
+          "romaji": "kenchikuka"
+        },
+        {
+          "id": 27,
+          "kana": "せんせい",
+          "kanji": "先生",
+          "english": "teacher",
+          "romaji": "sensei"
+        },
+        {
+          "id": 28,
+          "kana": "かしゅ",
+          "kanji": "歌手",
+          "english": "singer",
+          "romaji": "kashu"
+        },
+        {
+          "id": 29,
+          "kana": "エンジニア",
+          "kanji": "",
+          "english": "enginee",
+          "romaji": "enjinia"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Body",
+      "words": [
+        {
+          "id": 30,
+          "kana": "かかと",
+          "kanji": "踵",
+          "english": "heel",
+          "romaji": "kakato"
+        },
+        {
+          "id": 31,
+          "kana": "すね",
+          "kanji": "脛",
+          "english": "shin",
+          "romaji": "sune"
+        },
+        {
+          "id": 32,
+          "kana": "ひざ",
+          "kanji": "膝",
+          "english": "knee",
+          "romaji": "hiza"
+        },
+        {
+          "id": 33,
+          "kana": "もも",
+          "kanji": "腿",
+          "english": "thigh",
+          "romaji": "momo"
+        },
+        {
+          "id": 34,
+          "kana": "あたま",
+          "kanji": "頭",
+          "english": "head",
+          "romaji": "atama"
+        },
+        {
+          "id": 35,
+          "kana": "かお",
+          "kanji": "顔",
+          "english": "face",
+          "romaji": "kao"
+        },
+        {
+          "id": 36,
+          "kana": "くち",
+          "kanji": "口",
+          "english": "mouth",
+          "romaji": "kuchi"
+        },
+        {
+          "id": 37,
+          "kana": "くちびる",
+          "kanji": "唇",
+          "english": "lips",
+          "romaji": "kuchibiru"
+        },
+        {
+          "id": 38,
+          "kana": "は",
+          "kanji": "歯",
+          "english": "tooth",
+          "romaji": "ha"
+        },
+        {
+          "id": 39,
+          "kana": "はな",
+          "kanji": "鼻",
+          "english": "nose",
+          "romaji": "hana"
+        },
+        {
+          "id": 40,
+          "kana": "め",
+          "kanji": "目",
+          "english": "eye",
+          "romaji": "me"
+        },
+        {
+          "id": 41,
+          "kana": "かみ",
+          "kanji": "髪",
+          "english": "hair",
+          "romaji": "kami"
+        },
+        {
+          "id": 42,
+          "kana": "みみ",
+          "kanji": "耳",
+          "english": "ear",
+          "romaji": "mimi"
+        },
+        {
+          "id": 43,
+          "kana": "おなか",
+          "kanji": "御腹",
+          "english": "stomach",
+          "romaji": "onaka"
+        },
+        {
+          "id": 44,
+          "kana": "うで",
+          "kanji": "腕",
+          "english": "arm",
+          "romaji": "ude"
+        },
+        {
+          "id": 45,
+          "kana": "ひじ",
+          "kanji": "肘",
+          "english": "elbow",
+          "romaji": "hiji"
+        },
+        {
+          "id": 46,
+          "kana": "かた",
+          "kanji": "肩",
+          "english": "shoulder",
+          "romaji": "kata"
+        },
+        {
+          "id": 47,
+          "kana": "つめ",
+          "kanji": "爪",
+          "english": "nail",
+          "romaji": "tsume"
+        },
+        {
+          "id": 48,
+          "kana": "て",
+          "kanji": "手",
+          "english": "hand",
+          "romaji": "te"
+        },
+        {
+          "id": 49,
+          "kana": "てくび",
+          "kanji": "手首",
+          "english": "wrist",
+          "romaji": "tekubi"
+        },
+        {
+          "id": 50,
+          "kana": "ゆび",
+          "kanji": "指",
+          "english": "finger, toe",
+          "romaji": "yubi"
+        },
+        {
+          "id": 51,
+          "kana": "しり",
+          "kanji": "尻",
+          "english": "buttocks",
+          "romaji": "shiri"
+        },
+        {
+          "id": 52,
+          "kana": "かんぞう",
+          "kanji": "肝臓",
+          "english": "liver",
+          "romaji": "kanzō"
+        },
+        {
+          "id": 53,
+          "kana": "きも",
+          "kanji": "肝",
+          "english": "liver",
+          "romaji": "kimo"
+        },
+        {
+          "id": 54,
+          "kana": "きんにく",
+          "kanji": "筋肉",
+          "english": "muscle",
+          "romaji": "kin"
+        },
+        {
+          "id": 55,
+          "kana": "くび",
+          "kanji": "首",
+          "english": "neck",
+          "romaji": "kubi"
+        },
+        {
+          "id": 56,
+          "kana": "こころ",
+          "kanji": "心",
+          "english": "heart [as in feelings]",
+          "romaji": "kokoro"
+        },
+        {
+          "id": 57,
+          "kana": "こし",
+          "kanji": "腰",
+          "english": "waist, hip",
+          "romaji": "koshi"
+        },
+        {
+          "id": 58,
+          "kana": "しんぞう",
+          "kanji": "心臓",
+          "english": "heart",
+          "romaji": "shinzō"
+        },
+        {
+          "id": 59,
+          "kana": "せなか",
+          "kanji": "背中",
+          "english": "back",
+          "romaji": "senaka"
+        },
+        {
+          "id": 60,
+          "kana": "ち",
+          "kanji": "血",
+          "english": "blood",
+          "romaji": "chi"
+        },
+        {
+          "id": 61,
+          "kana": "にく",
+          "kanji": "肉",
+          "english": "meat",
+          "romaji": "niku"
+        },
+        {
+          "id": 62,
+          "kana": "ひふ",
+          "kanji": "皮膚",
+          "english": "skin",
+          "romaji": "hifu"
+        },
+        {
+          "id": 63,
+          "kana": "ほね",
+          "kanji": "骨",
+          "english": "bone",
+          "romaji": "hone"
+        },
+        {
+          "id": 64,
+          "kana": "むね",
+          "kanji": "胸",
+          "english": "chest",
+          "romaji": "mune"
+        },
+        {
+          "id": 65,
+          "kana": "かぜ",
+          "kanji": "風邪",
+          "english": "cold [illness]",
+          "romaji": "kaze"
+        },
+        {
+          "id": 66,
+          "kana": "げり",
+          "kanji": "下痢",
+          "english": "diarrhea",
+          "romaji": "geri"
+        },
+        {
+          "id": 67,
+          "kana": "びょうき",
+          "kanji": "病気",
+          "english": "illness",
+          "romaji": "byōki"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Family",
+      "words": [
+        {
+          "id": 68,
+          "kana": "かぞく",
+          "kanji": "家族",
+          "english": "family",
+          "romaji": "kazoku"
+        },
+        {
+          "id": 69,
+          "kana": "りょうしん",
+          "kanji": "両親",
+          "english": "parents",
+          "romaji": "ryoushin"
+        },
+        {
+          "id": 70,
+          "kana": "こども",
+          "kanji": "子供",
+          "english": "children, child",
+          "romaji": "kodomo"
+        },
+        {
+          "id": 71,
+          "kana": "つま",
+          "kanji": "妻",
+          "english": "wife",
+          "romaji": "tsuma"
+        },
+        {
+          "id": 72,
+          "kana": "おっと",
+          "kanji": "夫",
+          "english": "husband",
+          "romaji": "otto"
+        },
+        {
+          "id": 73,
+          "kana": "おとうと",
+          "kanji": "弟",
+          "english": "younger brother",
+          "romaji": "otōto"
+        },
+        {
+          "id": 74,
+          "kana": "いもうと",
+          "kanji": "妹",
+          "english": "younger sister",
+          "romaji": "imōto"
+        },
+        {
+          "id": 75,
+          "kana": "きょうだい",
+          "kanji": "兄弟",
+          "english": "brothers, siblings",
+          "romaji": "kyōdai"
+        },
+        {
+          "id": 76,
+          "kana": "しまい",
+          "kanji": "姉妹",
+          "english": "sisters",
+          "romaji": "shimai"
+        },
+        {
+          "id": 77,
+          "kana": "まご",
+          "kanji": "孫",
+          "english": "grandchild",
+          "romaji": "mago"
+        },
+        {
+          "id": 78,
+          "kana": "めい",
+          "kanji": "姪",
+          "english": "niece",
+          "romaji": "mei"
+        },
+        {
+          "id": 79,
+          "kana": "おい",
+          "kanji": "甥",
+          "english": "nephew",
+          "romaji": "oi"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Life",
+      "words": [
+        {
+          "id": 80,
+          "kana": "いきもの",
+          "kanji": "生き物",
+          "english": "living creatures",
+          "romaji": "ikimono"
+        },
+        {
+          "id": 81,
+          "kana": "ばけもの",
+          "kanji": "化け物",
+          "english": "monster",
+          "romaji": "bakemono"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Animals",
+      "words": [
+        {
+          "id": 82,
+          "kana": "どうぶつ",
+          "kanji": "動物",
+          "english": "animal",
+          "romaji": "dōbutsu"
+        },
+        {
+          "id": 83,
+          "kana": "チーター",
+          "kanji": "",
+          "english": "cheetah",
+          "romaji": "chītā"
+        },
+        {
+          "id": 84,
+          "kana": "いぬ",
+          "kanji": "犬",
+          "english": "dog",
+          "romaji": "inu"
+        },
+        {
+          "id": 85,
+          "kana": "ねこ",
+          "kanji": "猫",
+          "english": "cat",
+          "romaji": "neko"
+        },
+        {
+          "id": 86,
+          "kana": "うし",
+          "kanji": "牛",
+          "english": "cow",
+          "romaji": "ushi"
+        },
+        {
+          "id": 87,
+          "kana": "ぶた",
+          "kanji": "豚",
+          "english": "pig",
+          "romaji": "buta"
+        },
+        {
+          "id": 88,
+          "kana": "うま",
+          "kanji": "馬",
+          "english": "horse",
+          "romaji": "uma"
+        },
+        {
+          "id": 89,
+          "kana": "ひつじ",
+          "kanji": "羊",
+          "english": "sheep",
+          "romaji": "hitsuji"
+        },
+        {
+          "id": 90,
+          "kana": "さる",
+          "kanji": "猿",
+          "english": "monkey",
+          "romaji": "saru"
+        },
+        {
+          "id": 91,
+          "kana": "ねずみ",
+          "kanji": "鼠",
+          "english": "mouse, rat",
+          "romaji": "nezumi"
+        },
+        {
+          "id": 92,
+          "kana": "とら",
+          "kanji": "虎",
+          "english": "tiger",
+          "romaji": "tora"
+        },
+        {
+          "id": 93,
+          "kana": "オオカミ",
+          "kanji": "狼",
+          "english": "wolf",
+          "romaji": "ōkami"
+        },
+        {
+          "id": 94,
+          "kana": "うさぎ",
+          "kanji": "兎",
+          "english": "rabbit",
+          "romaji": "usagi"
+        },
+        {
+          "id": 95,
+          "kana": "しか",
+          "kanji": "鹿",
+          "english": "deer",
+          "romaji": "shika"
+        },
+        {
+          "id": 96,
+          "kana": "かえる",
+          "kanji": "蛙",
+          "english": "frog",
+          "romaji": "kaeru"
+        },
+        {
+          "id": 97,
+          "kana": "がま",
+          "kanji": "蟇",
+          "english": "toad",
+          "romaji": "gama"
+        },
+        {
+          "id": 98,
+          "kana": "しし",
+          "kanji": "獅子",
+          "english": "lion",
+          "romaji": "shishi"
+        },
+        {
+          "id": 99,
+          "kana": "キリン",
+          "kanji": "麒麟",
+          "english": "giraffe",
+          "romaji": "kirin"
+        },
+        {
+          "id": 100,
+          "kana": "ぞう",
+          "kanji": "象",
+          "english": "elephant",
+          "romaji": "zō"
+        },
+        {
+          "id": 101,
+          "kana": "とり",
+          "kanji": "鳥",
+          "english": "bird",
+          "romaji": "tori"
+        },
+        {
+          "id": 102,
+          "kana": "にわとり",
+          "kanji": "鶏",
+          "english": "chicken",
+          "romaji": "niwatori"
+        },
+        {
+          "id": 103,
+          "kana": "すずめ",
+          "kanji": "雀",
+          "english": "sparrow",
+          "romaji": "suzume"
+        },
+        {
+          "id": 104,
+          "kana": "からす",
+          "kanji": "烏",
+          "english": "crow, raven",
+          "romaji": "karasu"
+        },
+        {
+          "id": 105,
+          "kana": "わし",
+          "kanji": "鷲",
+          "english": "eagle",
+          "romaji": "washi"
+        },
+        {
+          "id": 106,
+          "kana": "たか",
+          "kanji": "鷹",
+          "english": "hawk, falcon",
+          "romaji": "taka"
+        },
+        {
+          "id": 107,
+          "kana": "さかな",
+          "kanji": "魚",
+          "english": "fish",
+          "romaji": "sakana"
+        },
+        {
+          "id": 108,
+          "kana": "たい",
+          "kanji": "鯛",
+          "english": "red snapper",
+          "romaji": "tai"
+        },
+        {
+          "id": 109,
+          "kana": "えび",
+          "kanji": "海老",
+          "english": "shrimp, lobster",
+          "romaji": "ebi"
+        },
+        {
+          "id": 110,
+          "kana": "いわし",
+          "kanji": "鰯",
+          "english": "sardine",
+          "romaji": "iwashi"
+        },
+        {
+          "id": 111,
+          "kana": "まぐろ",
+          "kanji": "鮪",
+          "english": "tuna",
+          "romaji": "maguro"
+        },
+        {
+          "id": 112,
+          "kana": "かつお",
+          "kanji": "鰹",
+          "english": "bonito",
+          "romaji": "katsuo"
+        },
+        {
+          "id": 113,
+          "kana": "さんま",
+          "kanji": "秋刀魚",
+          "english": "pike",
+          "romaji": "sanma"
+        },
+        {
+          "id": 114,
+          "kana": "あじ",
+          "kanji": "鰺",
+          "english": "horse mackerel",
+          "romaji": "aji"
+        },
+        {
+          "id": 115,
+          "kana": "さば",
+          "kanji": "鯖",
+          "english": "mackerel",
+          "romaji": "saba"
+        },
+        {
+          "id": 116,
+          "kana": "イカ",
+          "kanji": "烏賊",
+          "english": "squid",
+          "romaji": "ika"
+        },
+        {
+          "id": 117,
+          "kana": "むし",
+          "kanji": "虫",
+          "english": "insect",
+          "romaji": "mushi"
+        },
+        {
+          "id": 118,
+          "kana": "ちょう",
+          "kanji": "蝶",
+          "english": "butterfly",
+          "romaji": "chō"
+        },
+        {
+          "id": 119,
+          "kana": "ガ",
+          "kanji": "蛾",
+          "english": "moth",
+          "romaji": "ga"
+        },
+        {
+          "id": 120,
+          "kana": "せみ",
+          "kanji": "蝉",
+          "english": "cicada",
+          "romaji": "semi"
+        },
+        {
+          "id": 121,
+          "kana": "トンボ",
+          "kanji": "蜻蛉",
+          "english": "dragonfly",
+          "romaji": "tonbo"
+        },
+        {
+          "id": 122,
+          "kana": "バッタ",
+          "kanji": "飛蝗",
+          "english": "grasshopper",
+          "romaji": "batta"
+        },
+        {
+          "id": 123,
+          "kana": "クモ",
+          "kanji": "蜘蛛",
+          "english": "spider",
+          "romaji": "kumo"
+        },
+        {
+          "id": 124,
+          "kana": "ホタル",
+          "kanji": "蛍",
+          "english": "firefly",
+          "romaji": "hotaru"
+        },
+        {
+          "id": 125,
+          "kana": "カ",
+          "kanji": "蚊",
+          "english": "mosquito, gnat",
+          "romaji": "ka"
+        },
+        {
+          "id": 126,
+          "kana": "ゴキブリ",
+          "kanji": "蜚蠊",
+          "english": "cockroach",
+          "romaji": "gokiburi"
+        },
+        {
+          "id": 127,
+          "kana": "カタツムリ",
+          "kanji": "蝸牛",
+          "english": "snail",
+          "romaji": "katatsumuri"
+        },
+        {
+          "id": 128,
+          "kana": "ナメクジ",
+          "kanji": "蛞蝓",
+          "english": "slug",
+          "romaji": "namekuji"
+        },
+        {
+          "id": 129,
+          "kana": "ミミズ",
+          "kanji": "蚯蚓",
+          "english": "earthworm",
+          "romaji": "mimizu"
+        },
+        {
+          "id": 130,
+          "kana": "かい",
+          "kanji": "貝",
+          "english": "shellfish",
+          "romaji": "kai"
+        },
+        {
+          "id": 131,
+          "kana": "かいがら",
+          "kanji": "貝殻",
+          "english": "shell",
+          "romaji": "kaigara"
+        },
+        {
+          "id": 132,
+          "kana": "トカゲ",
+          "kanji": "蜥蜴",
+          "english": "lizard",
+          "romaji": "tokage"
+        },
+        {
+          "id": 133,
+          "kana": "へび",
+          "kanji": "蛇",
+          "english": "snake",
+          "romaji": "hebi"
+        },
+        {
+          "id": 134,
+          "kana": "くま",
+          "kanji": "熊",
+          "english": "bea",
+          "romaji": "kuma"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Crops",
+      "words": [
+        {
+          "id": 135,
+          "kana": "こめ",
+          "kanji": "米",
+          "english": "uncooked rice",
+          "romaji": "kome"
+        },
+        {
+          "id": 136,
+          "kana": "いね",
+          "kanji": "稲",
+          "english": "rice growing in a field",
+          "romaji": "ine"
+        },
+        {
+          "id": 137,
+          "kana": "むぎ",
+          "kanji": "麦",
+          "english": "wheat, barley, oats",
+          "romaji": "mugi"
+        },
+        {
+          "id": 138,
+          "kana": "やさい",
+          "kanji": "野菜",
+          "english": "vegetable",
+          "romaji": "yasai"
+        },
+        {
+          "id": 139,
+          "kana": "くだもの",
+          "kanji": "果物",
+          "english": "fruit for eating",
+          "romaji": "kudamono"
+        },
+        {
+          "id": 140,
+          "kana": "いも",
+          "kanji": "芋",
+          "english": "yam, potato, taro",
+          "romaji": "imo"
+        },
+        {
+          "id": 141,
+          "kana": "まめ",
+          "kanji": "豆",
+          "english": "beans, peas",
+          "romaji": "mame"
+        },
+        {
+          "id": 142,
+          "kana": "だいこん",
+          "kanji": "大根",
+          "english": "Japanese white radish",
+          "romaji": "daikon"
+        },
+        {
+          "id": 143,
+          "kana": "にんじん",
+          "kanji": "人参",
+          "english": "carrot",
+          "romaji": "ninjin"
+        },
+        {
+          "id": 144,
+          "kana": "リンゴ",
+          "kanji": "林檎",
+          "english": "apple",
+          "romaji": "ringo"
+        },
+        {
+          "id": 145,
+          "kana": "ミカン",
+          "kanji": "蜜柑",
+          "english": "mandarin orange",
+          "romaji": "mikan"
+        },
+        {
+          "id": 146,
+          "kana": "ナシ",
+          "kanji": "梨",
+          "english": "pear",
+          "romaji": "nashi"
+        },
+        {
+          "id": 147,
+          "kana": "クリ",
+          "kanji": "栗",
+          "english": "chestnut tree",
+          "romaji": "kuri"
+        },
+        {
+          "id": 148,
+          "kana": "モモ",
+          "kanji": "桃",
+          "english": "peach",
+          "romaji": "momo"
+        },
+        {
+          "id": 149,
+          "kana": "スイカ",
+          "kanji": "西瓜",
+          "english": "watermelon",
+          "romaji": "suika"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Time",
+      "words": [
+        {
+          "id": 150,
+          "kana": "じかん",
+          "kanji": "時間",
+          "english": "time",
+          "romaji": "jikan"
+        },
+        {
+          "id": 151,
+          "kana": "ふん",
+          "kanji": "分",
+          "english": "minute",
+          "romaji": "fun"
+        },
+        {
+          "id": 152,
+          "kana": "びょう",
+          "kanji": "秒",
+          "english": "second",
+          "romaji": "byō"
+        },
+        {
+          "id": 153,
+          "kana": "きょう",
+          "kanji": "今日",
+          "english": "today",
+          "romaji": "kyō"
+        },
+        {
+          "id": 154,
+          "kana": "あさ",
+          "kanji": "朝",
+          "english": "morning",
+          "romaji": "asa"
+        },
+        {
+          "id": 155,
+          "kana": "ひる",
+          "kanji": "昼",
+          "english": "afternoon",
+          "romaji": "hiru"
+        },
+        {
+          "id": 156,
+          "kana": "ゆうがた",
+          "kanji": "夕方",
+          "english": "evening",
+          "romaji": "yūgata"
+        },
+        {
+          "id": 157,
+          "kana": "ばん",
+          "kanji": "晩",
+          "english": "evening",
+          "romaji": "ban"
+        },
+        {
+          "id": 158,
+          "kana": "よる",
+          "kanji": "夜",
+          "english": "evening, night",
+          "romaji": "yoru"
+        },
+        {
+          "id": 159,
+          "kana": "ようび",
+          "kanji": "曜日",
+          "english": "~day",
+          "romaji": "yōbi"
+        },
+        {
+          "id": 160,
+          "kana": "しゅう",
+          "kanji": "週",
+          "english": "week",
+          "romaji": "shū"
+        },
+        {
+          "id": 161,
+          "kana": "いっしゅうかん",
+          "kanji": "一週間",
+          "english": "one week",
+          "romaji": "isshūkan"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Week Days",
+      "words": [
+        {
+          "id": 162,
+          "kana": "にちようび",
+          "kanji": "日曜日",
+          "english": "Sunday",
+          "romaji": "nichi"
+        },
+        {
+          "id": 163,
+          "kana": "げつようび",
+          "kanji": "月曜日",
+          "english": "Monday",
+          "romaji": "getsu"
+        },
+        {
+          "id": 164,
+          "kana": "かようび",
+          "kanji": "火曜日",
+          "english": "Tuesday",
+          "romaji": "ka"
+        },
+        {
+          "id": 165,
+          "kana": "すいようび",
+          "kanji": "水曜日",
+          "english": "Wednesday",
+          "romaji": "sui"
+        },
+        {
+          "id": 166,
+          "kana": "もくようび",
+          "kanji": "木曜日",
+          "english": "Thursday",
+          "romaji": "moku"
+        },
+        {
+          "id": 167,
+          "kana": "きんようび",
+          "kanji": "金曜日",
+          "english": "Friday",
+          "romaji": "kin"
+        },
+        {
+          "id": 168,
+          "kana": "どようび",
+          "kanji": "土曜日",
+          "english": "Saturday",
+          "romaji": "do"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Weather",
+      "words": [
+        {
+          "id": 169,
+          "kana": "たいよう",
+          "kanji": "太陽",
+          "english": "sun",
+          "romaji": "taiyō"
+        },
+        {
+          "id": 170,
+          "kana": "つき",
+          "kanji": "月",
+          "english": "moon",
+          "romaji": "tsuki"
+        },
+        {
+          "id": 171,
+          "kana": "ほし",
+          "kanji": "星",
+          "english": "star",
+          "romaji": "hoshi"
+        },
+        {
+          "id": 172,
+          "kana": "てんき",
+          "kanji": "天気",
+          "english": "weather",
+          "romaji": "tenki"
+        },
+        {
+          "id": 173,
+          "kana": "はれ",
+          "kanji": "晴れ",
+          "english": "clear weather",
+          "romaji": "hare"
+        },
+        {
+          "id": 174,
+          "kana": "あめ",
+          "kanji": "雨",
+          "english": "rain",
+          "romaji": "ame"
+        },
+        {
+          "id": 175,
+          "kana": "くもり",
+          "kanji": "曇り",
+          "english": "cloudy",
+          "romaji": "kumori"
+        },
+        {
+          "id": 176,
+          "kana": "ゆき",
+          "kanji": "雪",
+          "english": "snow",
+          "romaji": "yuki"
+        },
+        {
+          "id": 177,
+          "kana": "かぜ",
+          "kanji": "風",
+          "english": "wind",
+          "romaji": "kaze"
+        },
+        {
+          "id": 178,
+          "kana": "かみなり",
+          "kanji": "雷",
+          "english": "thunder, lightning",
+          "romaji": "kaminari"
+        },
+        {
+          "id": 179,
+          "kana": "たいふう",
+          "kanji": "台風",
+          "english": "typhoon",
+          "romaji": "taifū"
+        },
+        {
+          "id": 180,
+          "kana": "あらし",
+          "kanji": "嵐",
+          "english": "storm",
+          "romaji": "arashi"
+        },
+        {
+          "id": 181,
+          "kana": "そら",
+          "kanji": "空",
+          "english": "sky",
+          "romaji": "sora"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Directions and positions",
+      "words": [
+        {
+          "id": 182,
+          "kana": "きた",
+          "kanji": "北",
+          "english": "north",
+          "romaji": "kita"
+        },
+        {
+          "id": 183,
+          "kana": "ひがし",
+          "kanji": "東",
+          "english": "east",
+          "romaji": "higashi"
+        },
+        {
+          "id": 184,
+          "kana": "みなみ",
+          "kanji": "南",
+          "english": "south",
+          "romaji": "minami"
+        },
+        {
+          "id": 185,
+          "kana": "にし",
+          "kanji": "西",
+          "english": "west",
+          "romaji": "nishi"
+        },
+        {
+          "id": 186,
+          "kana": "ここ",
+          "kanji": "",
+          "english": "here",
+          "romaji": "koko"
+        },
+        {
+          "id": 187,
+          "kana": "そこ",
+          "kanji": "",
+          "english": "there",
+          "romaji": "soko"
+        },
+        {
+          "id": 188,
+          "kana": "あそこ",
+          "kanji": "",
+          "english": "over there",
+          "romaji": "asoko"
+        },
+        {
+          "id": 189,
+          "kana": "みぎ",
+          "kanji": "右",
+          "english": "right",
+          "romaji": "migi"
+        },
+        {
+          "id": 190,
+          "kana": "ひだり",
+          "kanji": "左",
+          "english": "left",
+          "romaji": "hidari"
+        },
+        {
+          "id": 191,
+          "kana": "うえ",
+          "kanji": "上",
+          "english": "above, up",
+          "romaji": "ue"
+        },
+        {
+          "id": 192,
+          "kana": "した",
+          "kanji": "下",
+          "english": "below, down",
+          "romaji": "shita"
+        },
+        {
+          "id": 193,
+          "kana": "まえ",
+          "kanji": "前",
+          "english": "front",
+          "romaji": "mae"
+        },
+        {
+          "id": 194,
+          "kana": "うしろ",
+          "kanji": "後",
+          "english": "behind",
+          "romaji": "ushiro"
+        },
+        {
+          "id": 195,
+          "kana": "むこう",
+          "kanji": "向こう",
+          "english": "the other side, opposite side",
+          "romaji": "mukō"
+        },
+        {
+          "id": 196,
+          "kana": "ななめ",
+          "kanji": "斜め",
+          "english": "diagonal",
+          "romaji": "naname"
+        },
+        {
+          "id": 197,
+          "kana": "てまえ",
+          "kanji": "手前",
+          "english": "nearer, more in front",
+          "romaji": "temae"
+        },
+        {
+          "id": 198,
+          "kana": "とおい",
+          "kanji": "遠い",
+          "english": "far",
+          "romaji": "tooi"
+        },
+        {
+          "id": 199,
+          "kana": "ちかい",
+          "kanji": "近い",
+          "english": "near, close",
+          "romaji": "chikai"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Materials",
+      "words": [
+        {
+          "id": 200,
+          "kana": "みず",
+          "kanji": "水",
+          "english": "water",
+          "romaji": "mizu"
+        },
+        {
+          "id": 201,
+          "kana": "ゆ",
+          "kanji": "湯",
+          "english": "hot water",
+          "romaji": "yu"
+        },
+        {
+          "id": 202,
+          "kana": "こおり",
+          "kanji": "氷",
+          "english": "ice",
+          "romaji": "kōri"
+        },
+        {
+          "id": 203,
+          "kana": "ゆげ",
+          "kanji": "湯気",
+          "english": "steam",
+          "romaji": "yuge"
+        },
+        {
+          "id": 204,
+          "kana": "ひ",
+          "kanji": "火",
+          "english": "fire",
+          "romaji": "hi"
+        },
+        {
+          "id": 205,
+          "kana": "ガス",
+          "kanji": "",
+          "english": "gas",
+          "romaji": "gasu"
+        },
+        {
+          "id": 206,
+          "kana": "くうき",
+          "kanji": "空気",
+          "english": "air, atmosphere",
+          "romaji": "kūki"
+        },
+        {
+          "id": 207,
+          "kana": "つち",
+          "kanji": "土",
+          "english": "earth, ground",
+          "romaji": "tsuchi"
+        },
+        {
+          "id": 208,
+          "kana": "きんぞく",
+          "kanji": "金属",
+          "english": "metal, metallic",
+          "romaji": "kinzoku"
+        },
+        {
+          "id": 209,
+          "kana": "どろ",
+          "kanji": "泥",
+          "english": "mud, mire, clay, plaster",
+          "romaji": "doro"
+        },
+        {
+          "id": 210,
+          "kana": "けむり",
+          "kanji": "煙",
+          "english": "smoke, tobacco, opium",
+          "romaji": "kemuri"
+        },
+        {
+          "id": 211,
+          "kana": "てつ",
+          "kanji": "鉄",
+          "english": "iron [Fe]",
+          "romaji": "tetsu"
+        },
+        {
+          "id": 212,
+          "kana": "どう",
+          "kanji": "銅",
+          "english": "copper [Cu]",
+          "romaji": "dō"
+        },
+        {
+          "id": 213,
+          "kana": "きん",
+          "kanji": "金",
+          "english": "gold [Au]; money",
+          "romaji": "kin"
+        },
+        {
+          "id": 214,
+          "kana": "ぎん",
+          "kanji": "銀",
+          "english": "silver [Ag]; wealth",
+          "romaji": "gin"
+        },
+        {
+          "id": 215,
+          "kana": "なまり",
+          "kanji": "鉛",
+          "english": "lead [Pb]",
+          "romaji": "namari"
+        },
+        {
+          "id": 216,
+          "kana": "しお",
+          "kanji": "塩",
+          "english": "salt [NaCl]",
+          "romaji": "shio"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Weights and measures",
+      "words": [
+        {
+          "id": 217,
+          "kana": "メートル",
+          "kanji": "",
+          "english": "meter",
+          "romaji": "mētoru"
+        },
+        {
+          "id": 218,
+          "kana": "リットル",
+          "kanji": "",
+          "english": "litre",
+          "romaji": "rittoru"
+        },
+        {
+          "id": 219,
+          "kana": "グラム",
+          "kanji": "",
+          "english": "gram",
+          "romaji": "guramu"
+        },
+        {
+          "id": 220,
+          "kana": "キロ",
+          "kanji": "",
+          "english": "kilo-",
+          "romaji": "kiro"
+        },
+        {
+          "id": 221,
+          "kana": "ミリ",
+          "kanji": "",
+          "english": "milli-",
+          "romaji": "miri"
+        },
+        {
+          "id": 222,
+          "kana": "センチメートル",
+          "kanji": "センチ",
+          "english": "centimeter",
+          "romaji": "senchi"
+        },
+        {
+          "id": 223,
+          "kana": "インチ",
+          "kanji": "",
+          "english": "inch",
+          "romaji": "inchi"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Society",
+      "words": [
+        {
+          "id": 224,
+          "kana": "しゃかい",
+          "kanji": "社会",
+          "english": "society",
+          "romaji": "shakai"
+        },
+        {
+          "id": 225,
+          "kana": "けいざい",
+          "kanji": "経済",
+          "english": "economy, economics",
+          "romaji": "keizai"
+        },
+        {
+          "id": 226,
+          "kana": "かいしゃ",
+          "kanji": "会社",
+          "english": "company",
+          "romaji": "kaisha"
+        },
+        {
+          "id": 227,
+          "kana": "かいぎ",
+          "kanji": "会議",
+          "english": "meeting",
+          "romaji": "kaigi"
+        },
+        {
+          "id": 228,
+          "kana": "がっこう",
+          "kanji": "学校",
+          "english": "school",
+          "romaji": "gakkō"
+        },
+        {
+          "id": 229,
+          "kana": "やくしょ",
+          "kanji": "役所",
+          "english": "local government office",
+          "romaji": "yakusho"
+        },
+        {
+          "id": 230,
+          "kana": "みせ",
+          "kanji": "店",
+          "english": "store",
+          "romaji": "mise"
+        },
+        {
+          "id": 231,
+          "kana": "ホテル",
+          "kanji": "",
+          "english": "hotel",
+          "romaji": "hoteru"
+        },
+        {
+          "id": 232,
+          "kana": "こうじょう",
+          "kanji": "工場",
+          "english": "factory",
+          "romaji": "kōjō"
+        },
+        {
+          "id": 233,
+          "kana": "かね",
+          "kanji": "金",
+          "english": "money",
+          "romaji": "kane"
+        },
+        {
+          "id": 234,
+          "kana": "さつ",
+          "kanji": "札",
+          "english": "bill [of money, e.g., a thousand-yen bill]",
+          "romaji": "satsu"
+        },
+        {
+          "id": 235,
+          "kana": "こぜに",
+          "kanji": "小銭",
+          "english": "small change",
+          "romaji": "kozeni"
+        },
+        {
+          "id": 236,
+          "kana": "じどうはんばいき",
+          "kanji": "自動販売機",
+          "english": "vending machine, slot machine",
+          "romaji": "jidōhanbaiki"
+        },
+        {
+          "id": 237,
+          "kana": "きって",
+          "kanji": "切手",
+          "english": "stamp",
+          "romaji": "kitte"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Home",
+      "words": [
+        {
+          "id": 238,
+          "kana": "つくえ",
+          "kanji": "机",
+          "english": "desk",
+          "romaji": "tsukue"
+        },
+        {
+          "id": 239,
+          "kana": "いす",
+          "kanji": "椅子",
+          "english": "chair, position",
+          "romaji": "isu"
+        },
+        {
+          "id": 240,
+          "kana": "たたみ",
+          "kanji": "畳",
+          "english": "a tatami mat",
+          "romaji": "tatami"
+        },
+        {
+          "id": 241,
+          "kana": "と",
+          "kanji": "戸",
+          "english": "door, family",
+          "romaji": "to"
+        },
+        {
+          "id": 242,
+          "kana": "とびら",
+          "kanji": "扉",
+          "english": "door panel",
+          "romaji": "tobira"
+        },
+        {
+          "id": 243,
+          "kana": "ドア",
+          "kanji": "",
+          "english": "door",
+          "romaji": "doa"
+        },
+        {
+          "id": 244,
+          "kana": "まど",
+          "kanji": "窓",
+          "english": "window",
+          "romaji": "mado"
+        },
+        {
+          "id": 245,
+          "kana": "ふとん",
+          "kanji": "布団",
+          "english": "futon",
+          "romaji": "futon"
+        },
+        {
+          "id": 246,
+          "kana": "げんかん",
+          "kanji": "玄関",
+          "english": "entrance",
+          "romaji": "genkan"
+        },
+        {
+          "id": 247,
+          "kana": "いえ",
+          "kanji": "家",
+          "english": "house, home",
+          "romaji": "ie"
+        },
+        {
+          "id": 248,
+          "kana": "エレベーター",
+          "kanji": "",
+          "english": "elevator",
+          "romaji": "erebētā"
+        },
+        {
+          "id": 249,
+          "kana": "エスカレーター",
+          "kanji": "",
+          "english": "escalator",
+          "romaji": "esukarētā"
+        },
+        {
+          "id": 250,
+          "kana": "でんき",
+          "kanji": "電気",
+          "english": "electricity",
+          "romaji": "denki"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Tools",
+      "words": [
+        {
+          "id": 251,
+          "kana": "くぎ",
+          "kanji": "釘",
+          "english": "nail, spike",
+          "romaji": "kugi"
+        },
+        {
+          "id": 252,
+          "kana": "ひも",
+          "kanji": "紐",
+          "english": "string, cord",
+          "romaji": "himo"
+        },
+        {
+          "id": 253,
+          "kana": "なわ",
+          "kanji": "縄",
+          "english": "rope, string",
+          "romaji": "nawa"
+        },
+        {
+          "id": 254,
+          "kana": "ふくろ",
+          "kanji": "袋",
+          "english": "pocket, bag",
+          "romaji": "fukuro"
+        },
+        {
+          "id": 255,
+          "kana": "かばん",
+          "kanji": "鞄",
+          "english": "leather bag",
+          "romaji": "kaban"
+        },
+        {
+          "id": 256,
+          "kana": "かさ",
+          "kanji": "傘",
+          "english": "umbrella, parasol",
+          "romaji": "kasa"
+        },
+        {
+          "id": 257,
+          "kana": "かぎ",
+          "kanji": "鍵",
+          "english": "door bolt, key",
+          "romaji": "kagi"
+        },
+        {
+          "id": 258,
+          "kana": "ちょうこく",
+          "kanji": "彫刻",
+          "english": "sculpture, engraving",
+          "romaji": "chōkoku"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Stationery",
+      "words": [
+        {
+          "id": 259,
+          "kana": "ぶんぼうぐ",
+          "kanji": "文房具",
+          "english": "stationery ",
+          "romaji": "bunbōgu"
+        },
+        {
+          "id": 260,
+          "kana": "インク",
+          "kanji": "",
+          "english": "ink",
+          "romaji": "inku"
+        },
+        {
+          "id": 261,
+          "kana": "ペン",
+          "kanji": "",
+          "english": "pen",
+          "romaji": "pen"
+        },
+        {
+          "id": 262,
+          "kana": "ボールペン",
+          "kanji": "",
+          "english": "ball-point pen",
+          "romaji": "bōrupen"
+        },
+        {
+          "id": 263,
+          "kana": "まんねんひつ",
+          "kanji": "万年筆",
+          "english": "fountain pen",
+          "romaji": "mannenhitsu"
+        },
+        {
+          "id": 264,
+          "kana": "えんぴつ",
+          "kanji": "鉛筆",
+          "english": "pencil",
+          "romaji": "enpitsu"
+        },
+        {
+          "id": 265,
+          "kana": "ふで",
+          "kanji": "筆",
+          "english": "brush for writing or painting",
+          "romaji": "fude"
+        },
+        {
+          "id": 266,
+          "kana": "チョーク",
+          "kanji": "",
+          "english": "chalk",
+          "romaji": "chōku"
+        },
+        {
+          "id": 267,
+          "kana": "けしゴム",
+          "kanji": "消しゴム",
+          "english": "eraser",
+          "romaji": "keshigomu"
+        },
+        {
+          "id": 268,
+          "kana": "えんぴつけずり",
+          "kanji": "鉛筆削り",
+          "english": "pencil sharpener",
+          "romaji": "enpitsu"
+        },
+        {
+          "id": 269,
+          "kana": "じょうぎ",
+          "kanji": "定規",
+          "english": "ruler",
+          "romaji": "jōgi"
+        },
+        {
+          "id": 270,
+          "kana": "ノート",
+          "kanji": "",
+          "english": "notebook",
+          "romaji": "nōto"
+        },
+        {
+          "id": 271,
+          "kana": "にっき",
+          "kanji": "日記",
+          "english": "diary",
+          "romaji": "nikki"
+        },
+        {
+          "id": 272,
+          "kana": "カバー",
+          "kanji": "",
+          "english": "book cover",
+          "romaji": "kabā"
+        },
+        {
+          "id": 273,
+          "kana": "ふうとう",
+          "kanji": "封筒",
+          "english": "envelope",
+          "romaji": "fūtō"
+        },
+        {
+          "id": 274,
+          "kana": "はさみ",
+          "kanji": "鋏",
+          "english": "scissors",
+          "romaji": "hasami"
+        },
+        {
+          "id": 275,
+          "kana": "ホッチキス",
+          "kanji": "",
+          "english": "stapler",
+          "romaji": "hotchikisu"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Clothes",
+      "words": [
+        {
+          "id": 276,
+          "kana": "ふく",
+          "kanji": "服",
+          "english": "clothes",
+          "romaji": "fuku"
+        },
+        {
+          "id": 277,
+          "kana": "ようふく",
+          "kanji": "洋服",
+          "english": "western clothing",
+          "romaji": "yōfuku"
+        },
+        {
+          "id": 278,
+          "kana": "きもの",
+          "kanji": "着物",
+          "english": "kimono",
+          "romaji": "kimono"
+        },
+        {
+          "id": 279,
+          "kana": "わふく",
+          "kanji": "和服",
+          "english": "Japanese clothing",
+          "romaji": "wafuku"
+        },
+        {
+          "id": 280,
+          "kana": "そで",
+          "kanji": "袖",
+          "english": "sleeve",
+          "romaji": "sode"
+        },
+        {
+          "id": 281,
+          "kana": "えり",
+          "kanji": "襟",
+          "english": "lapel, collar",
+          "romaji": "eri"
+        },
+        {
+          "id": 282,
+          "kana": "ボタン",
+          "kanji": "",
+          "english": "button",
+          "romaji": "botan"
+        },
+        {
+          "id": 283,
+          "kana": "ベルト",
+          "kanji": "",
+          "english": "belt",
+          "romaji": "beruto"
+        },
+        {
+          "id": 284,
+          "kana": "くつ",
+          "kanji": "靴",
+          "english": "shoe",
+          "romaji": "kutsu"
+        },
+        {
+          "id": 285,
+          "kana": "くつした",
+          "kanji": "靴下",
+          "english": "sock",
+          "romaji": "kutsushita"
+        },
+        {
+          "id": 286,
+          "kana": "めがね",
+          "kanji": "眼鏡",
+          "english": "glasses",
+          "romaji": "megane"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Transport",
+      "words": [
+        {
+          "id": 287,
+          "kana": "てつどう",
+          "kanji": "鉄道",
+          "english": "railway",
+          "romaji": "tetsudō"
+        },
+        {
+          "id": 288,
+          "kana": "えき",
+          "kanji": "駅",
+          "english": "station",
+          "romaji": "eki"
+        },
+        {
+          "id": 289,
+          "kana": "ひこうき",
+          "kanji": "飛行機",
+          "english": "airplane",
+          "romaji": "hikōki"
+        },
+        {
+          "id": 290,
+          "kana": "みち",
+          "kanji": "道",
+          "english": "street, way, road",
+          "romaji": "michi"
+        },
+        {
+          "id": 291,
+          "kana": "どうろ",
+          "kanji": "道路",
+          "english": "road",
+          "romaji": "dōro"
+        },
+        {
+          "id": 292,
+          "kana": "バスてい",
+          "kanji": "バス停",
+          "english": "bus-stop",
+          "romaji": "basutei"
+        },
+        {
+          "id": 293,
+          "kana": "とおり",
+          "kanji": "通り",
+          "english": "avenue",
+          "romaji": "tōri"
+        },
+        {
+          "id": 294,
+          "kana": "でんしゃ",
+          "kanji": "電車",
+          "english": "train",
+          "romaji": "densha"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Language",
+      "words": [
+        {
+          "id": 295,
+          "kana": "もじ",
+          "kanji": "文字",
+          "english": "letter, character, script",
+          "romaji": "moji"
+        },
+        {
+          "id": 296,
+          "kana": "じ",
+          "kanji": "字",
+          "english": "a letter, character",
+          "romaji": "ji"
+        },
+        {
+          "id": 297,
+          "kana": "かんじ",
+          "kanji": "漢字",
+          "english": "Chinese character",
+          "romaji": "kanji"
+        },
+        {
+          "id": 298,
+          "kana": "ひらがな",
+          "kanji": "平仮名",
+          "english": "hiragana syllabary characters",
+          "romaji": "hiragana"
+        },
+        {
+          "id": 299,
+          "kana": "カタカナ",
+          "kanji": "片仮名",
+          "english": "katakana syllabary characters",
+          "romaji": "katakana"
+        },
+        {
+          "id": 300,
+          "kana": "すうじ",
+          "kanji": "数字",
+          "english": "numbers",
+          "romaji": "sūji"
+        },
+        {
+          "id": 301,
+          "kana": "アルファベット",
+          "kanji": "",
+          "english": "alphabet",
+          "romaji": "arufabetto"
+        },
+        {
+          "id": 302,
+          "kana": "ローマ字",
+          "kanji": "",
+          "english": "Roman characters, Latin script",
+          "romaji": "rōmaji"
+        },
+        {
+          "id": 303,
+          "kana": "がいこくご",
+          "kanji": "外国語",
+          "english": "foreign language",
+          "romaji": "gaikokugo"
+        },
+        {
+          "id": 304,
+          "kana": "えいご",
+          "kanji": "英語",
+          "english": "English [language]",
+          "romaji": "eigo"
+        },
+        {
+          "id": 305,
+          "kana": "ちゅうごくご",
+          "kanji": "中国語",
+          "english": "Chinese [language]",
+          "romaji": "chūgokugo"
+        },
+        {
+          "id": 306,
+          "kana": "どいつご",
+          "kanji": "ドイツ語",
+          "english": "German [language]",
+          "romaji": "doitsugo"
+        },
+        {
+          "id": 307,
+          "kana": "すぺいんご",
+          "kanji": "スペイン語",
+          "english": "Spanish [language]",
+          "romaji": "supeingo"
+        },
+        {
+          "id": 308,
+          "kana": "ふらんすご",
+          "kanji": "フランス語",
+          "english": "French [language]",
+          "romaji": "furansugo"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Media",
+      "words": [
+        {
+          "id": 309,
+          "kana": "ほん",
+          "kanji": "本",
+          "english": "book",
+          "romaji": "hon"
+        },
+        {
+          "id": 310,
+          "kana": "かみ",
+          "kanji": "紙",
+          "english": "paper",
+          "romaji": "kami"
+        },
+        {
+          "id": 311,
+          "kana": "てがみ",
+          "kanji": "手紙",
+          "english": "letter",
+          "romaji": "tegami"
+        },
+        {
+          "id": 312,
+          "kana": "しんぶん",
+          "kanji": "新聞",
+          "english": "newspaper",
+          "romaji": "shinbun"
+        },
+        {
+          "id": 313,
+          "kana": "じしょ",
+          "kanji": "辞書",
+          "english": "dictionary",
+          "romaji": "jisho"
+        },
+        {
+          "id": 314,
+          "kana": "パソコン",
+          "kanji": "",
+          "english": "personal computer",
+          "romaji": "pasokon"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Colors",
+      "words": [
+        {
+          "id": 315,
+          "kana": "いろ",
+          "kanji": "色",
+          "english": "color",
+          "romaji": "iro"
+        },
+        {
+          "id": 316,
+          "kana": "あか",
+          "kanji": "赤",
+          "english": "red",
+          "romaji": "aka"
+        },
+        {
+          "id": 317,
+          "kana": "きいろ",
+          "kanji": "黄色",
+          "english": "yellow",
+          "romaji": "kiiro"
+        },
+        {
+          "id": 318,
+          "kana": "みどり",
+          "kanji": "緑",
+          "english": "green",
+          "romaji": "midori"
+        },
+        {
+          "id": 319,
+          "kana": "あお",
+          "kanji": "青",
+          "english": "blue",
+          "romaji": "ao"
+        },
+        {
+          "id": 320,
+          "kana": "むらさき",
+          "kanji": "紫",
+          "english": "purple",
+          "romaji": "murasaki"
+        },
+        {
+          "id": 321,
+          "kana": "しろ",
+          "kanji": "白",
+          "english": "white",
+          "romaji": "shiro"
+        },
+        {
+          "id": 322,
+          "kana": "くろ",
+          "kanji": "黒",
+          "english": "black",
+          "romaji": "kuro"
+        },
+        {
+          "id": 323,
+          "kana": "ピンク",
+          "kanji": "",
+          "english": "pink",
+          "romaji": "pinku"
+        },
+        {
+          "id": 324,
+          "kana": "ちゃいろ",
+          "kanji": "茶色",
+          "english": "brown",
+          "romaji": "chairo"
+        },
+        {
+          "id": 325,
+          "kana": "オレンジ",
+          "kanji": "",
+          "english": "orange",
+          "romaji": "orenji"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Others",
+      "words": [
+        {
+          "id": 326,
+          "kana": "え",
+          "kanji": "絵",
+          "english": "picture",
+          "romaji": "e"
+        },
+        {
+          "id": 327,
+          "kana": "おんがく",
+          "kanji": "音楽",
+          "english": "music",
+          "romaji": "ongaku"
+        },
+        {
+          "id": 328,
+          "kana": "りか",
+          "kanji": "理科",
+          "english": "science",
+          "romaji": "rika"
+        },
+        {
+          "id": 329,
+          "kana": "さんすう",
+          "kanji": "算数",
+          "english": "arithmetic",
+          "romaji": "sansū"
+        },
+        {
+          "id": 330,
+          "kana": "れきし",
+          "kanji": "歴史",
+          "english": "history",
+          "romaji": "rekishi"
+        },
+        {
+          "id": 331,
+          "kana": "ちり",
+          "kanji": "地理",
+          "english": "geography",
+          "romaji": "chiri"
+        },
+        {
+          "id": 332,
+          "kana": "たいいく",
+          "kanji": "体育",
+          "english": "physical education",
+          "romaji": "taiiku"
+        },
+        {
+          "id": 333,
+          "kana": "スポーツ",
+          "kanji": "",
+          "english": "sport",
+          "romaji": "supōtsu"
+        },
+        {
+          "id": 334,
+          "kana": "システム",
+          "kanji": "",
+          "english": "system",
+          "romaji": "shisutemu"
+        },
+        {
+          "id": 335,
+          "kana": "じょうほう",
+          "kanji": "情報",
+          "english": "information, news",
+          "romaji": "jōhō"
+        },
+        {
+          "id": 336,
+          "kana": "ひつよう",
+          "kanji": "必要",
+          "english": "necessity",
+          "romaji": "hitsuyō"
+        },
+        {
+          "id": 337,
+          "kana": "べんきょう",
+          "kanji": "勉強",
+          "english": "study",
+          "romaji": "benkyō"
+        },
+        {
+          "id": 338,
+          "kana": "いらい",
+          "kanji": "依頼",
+          "english": "request",
+          "romaji": "irai"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Numbers",
+      "words": [
+        {
+          "id": 339,
+          "kana": "いち",
+          "kanji": "一",
+          "english": "one",
+          "romaji": "ichi"
+        },
+        {
+          "id": 340,
+          "kana": "に",
+          "kanji": "二",
+          "english": "two",
+          "romaji": "ni"
+        },
+        {
+          "id": 341,
+          "kana": "さん",
+          "kanji": "三",
+          "english": "three",
+          "romaji": "san"
+        },
+        {
+          "id": 342,
+          "kana": "ご",
+          "kanji": "五",
+          "english": "five",
+          "romaji": "go"
+        },
+        {
+          "id": 343,
+          "kana": "ろく",
+          "kanji": "六",
+          "english": "six",
+          "romaji": "roku"
+        },
+        {
+          "id": 344,
+          "kana": "はち",
+          "kanji": "八",
+          "english": "eight",
+          "romaji": "hachi"
+        },
+        {
+          "id": 345,
+          "kana": "じゅう",
+          "kanji": "十",
+          "english": "ten",
+          "romaji": "jū"
+        },
+        {
+          "id": 346,
+          "kana": "ひゃく",
+          "kanji": "百",
+          "english": "hundred",
+          "romaji": "hyaku"
+        },
+        {
+          "id": 347,
+          "kana": "せん",
+          "kanji": "千",
+          "english": "thousand",
+          "romaji": "sen"
+        },
+        {
+          "id": 348,
+          "kana": "まん",
+          "kanji": "万",
+          "english": "ten thousand",
+          "romaji": "man"
+        },
+        {
+          "id": 349,
+          "kana": "おく",
+          "kanji": "億",
+          "english": "one hundred million",
+          "romaji": "oku"
+        },
+        {
+          "id": 350,
+          "kana": "ひとつ",
+          "kanji": "一つ",
+          "english": "one, one thing",
+          "romaji": "hitotsu"
+        },
+        {
+          "id": 351,
+          "kana": "ふたつ",
+          "kanji": "二つ",
+          "english": "two, two things",
+          "romaji": "futatsu"
+        },
+        {
+          "id": 352,
+          "kana": "みっつ",
+          "kanji": "三つ",
+          "english": "three, three things",
+          "romaji": "mittsu"
+        },
+        {
+          "id": 353,
+          "kana": "よっつ",
+          "kanji": "四つ",
+          "english": "four, four things",
+          "romaji": "yottsu"
+        },
+        {
+          "id": 354,
+          "kana": "いつつ",
+          "kanji": "五つ",
+          "english": "five, five things",
+          "romaji": "itsutsu"
+        },
+        {
+          "id": 355,
+          "kana": "むっつ",
+          "kanji": "六つ",
+          "english": "six, six things",
+          "romaji": "muttsu"
+        },
+        {
+          "id": 356,
+          "kana": "ななつ",
+          "kanji": "七つ",
+          "english": "seven, seven things",
+          "romaji": "nanatsu"
+        },
+        {
+          "id": 357,
+          "kana": "やっつ",
+          "kanji": "八つ",
+          "english": "eight, eight things",
+          "romaji": "yattsu"
+        },
+        {
+          "id": 358,
+          "kana": "ここのつ",
+          "kanji": "九つ",
+          "english": "nine, nine things",
+          "romaji": "kokonotsu"
+        },
+        {
+          "id": 359,
+          "kana": "とお",
+          "kanji": "十",
+          "english": "ten, ten things",
+          "romaji": "tō"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Abstract nouns",
+      "words": [
+        {
+          "id": 360,
+          "kana": "これ",
+          "kanji": "",
+          "english": "this, it",
+          "romaji": "kore"
+        },
+        {
+          "id": 361,
+          "kana": "それ",
+          "kanji": "",
+          "english": "that",
+          "romaji": "sore"
+        },
+        {
+          "id": 362,
+          "kana": "あれ",
+          "kanji": "",
+          "english": "that over there",
+          "romaji": "are"
+        },
+        {
+          "id": 363,
+          "kana": "どれ",
+          "kanji": "",
+          "english": "which",
+          "romaji": "dore"
+        },
+        {
+          "id": 364,
+          "kana": "こちら",
+          "kanji": "こっち",
+          "english": "this direction, thing, person, or place",
+          "romaji": "kochira"
+        },
+        {
+          "id": 365,
+          "kana": "そちら",
+          "kanji": "そっち",
+          "english": "that direction, thing, person, or place",
+          "romaji": "sochira"
+        },
+        {
+          "id": 366,
+          "kana": "あちら",
+          "kanji": "あっち",
+          "english": "that direction, thing, person, or place over there",
+          "romaji": "achira"
+        },
+        {
+          "id": 367,
+          "kana": "どちら",
+          "kanji": "どっち",
+          "english": "which direction, thing, person, or place",
+          "romaji": "dochira"
+        },
+        {
+          "id": 368,
+          "kana": "ひみつ",
+          "kanji": "秘密",
+          "english": "secret",
+          "romaji": "himitsu"
+        },
+        {
+          "id": 369,
+          "kana": "じどう",
+          "kanji": "自動",
+          "english": "automatic",
+          "romaji": "jidō"
+        },
+        {
+          "id": 370,
+          "kana": "ないよう",
+          "kanji": "内容",
+          "english": "content",
+          "romaji": "naiyō"
+        },
+        {
+          "id": 371,
+          "kana": "せいしき",
+          "kanji": "正式",
+          "english": "formality",
+          "romaji": "seishiki"
+        },
+        {
+          "id": 372,
+          "kana": "けっこん",
+          "kanji": "結婚",
+          "english": "marriage",
+          "romaji": "kekkon"
+        },
+        {
+          "id": 373,
+          "kana": "げんざい",
+          "kanji": "現在",
+          "english": "now",
+          "romaji": "genzai"
+        },
+        {
+          "id": 374,
+          "kana": "いま",
+          "kanji": "今",
+          "english": "now",
+          "romaji": "ima"
+        },
+        {
+          "id": 375,
+          "kana": "かこ",
+          "kanji": "過去",
+          "english": "past",
+          "romaji": "kako"
+        },
+        {
+          "id": 376,
+          "kana": "みらい",
+          "kanji": "未来",
+          "english": "future",
+          "romaji": "mirai"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Forms",
+      "words": [
+        {
+          "id": 377,
+          "kana": "すごい",
+          "kanji": "凄い",
+          "english": "amazing",
+          "romaji": "sugoi"
+        },
+        {
+          "id": 378,
+          "kana": "すばらしい",
+          "kanji": "素晴らしい",
+          "english": "wonderful",
+          "romaji": "subarashii"
+        },
+        {
+          "id": 379,
+          "kana": "わるい",
+          "kanji": "悪い",
+          "english": "bad, inferior",
+          "romaji": "warui"
+        },
+        {
+          "id": 380,
+          "kana": "たかい",
+          "kanji": "高い",
+          "english": "expensive, high",
+          "romaji": "takai"
+        },
+        {
+          "id": 381,
+          "kana": "ひくい",
+          "kanji": "低い",
+          "english": "low",
+          "romaji": "hikui"
+        },
+        {
+          "id": 382,
+          "kana": "やすい",
+          "kanji": "安い",
+          "english": "cheap",
+          "romaji": "yasui"
+        },
+        {
+          "id": 383,
+          "kana": "おおきい",
+          "kanji": "大きい",
+          "english": "big",
+          "romaji": "ōkii"
+        },
+        {
+          "id": 384,
+          "kana": "ちいさい",
+          "kanji": "小さい",
+          "english": "small",
+          "romaji": "chiisai"
+        },
+        {
+          "id": 385,
+          "kana": "ほそい",
+          "kanji": "細い",
+          "english": "thin",
+          "romaji": "hosoi"
+        },
+        {
+          "id": 386,
+          "kana": "ふとい",
+          "kanji": "太い",
+          "english": "thick",
+          "romaji": "futoi"
+        },
+        {
+          "id": 387,
+          "kana": "ふるい",
+          "kanji": "古い",
+          "english": "old",
+          "romaji": "furui"
+        },
+        {
+          "id": 388,
+          "kana": "あたらしい",
+          "kanji": "新しい",
+          "english": "new",
+          "romaji": "atarashii"
+        },
+        {
+          "id": 389,
+          "kana": "わかい",
+          "kanji": "若い",
+          "english": "young",
+          "romaji": "wakai"
+        },
+        {
+          "id": 390,
+          "kana": "かるい",
+          "kanji": "軽い",
+          "english": "light, easy",
+          "romaji": "karui"
+        },
+        {
+          "id": 391,
+          "kana": "おもい",
+          "kanji": "重い",
+          "english": "heavy",
+          "romaji": "omoi"
+        },
+        {
+          "id": 392,
+          "kana": "やさしい",
+          "kanji": "易しい",
+          "english": "easy, simple",
+          "romaji": "yasashii"
+        },
+        {
+          "id": 393,
+          "kana": "むずかしい",
+          "kanji": "難しい",
+          "english": "difficult",
+          "romaji": "muzukashii"
+        },
+        {
+          "id": 394,
+          "kana": "やわらかい",
+          "kanji": "柔らかい",
+          "english": "soft",
+          "romaji": "yawarakai"
+        },
+        {
+          "id": 395,
+          "kana": "つめたい",
+          "kanji": "冷たい",
+          "english": "cold",
+          "romaji": "tsumetai"
+        },
+        {
+          "id": 396,
+          "kana": "さむい",
+          "kanji": "寒い",
+          "english": "cold",
+          "romaji": "samui"
+        },
+        {
+          "id": 397,
+          "kana": "おいしい",
+          "kanji": "美味しい",
+          "english": "delicious",
+          "romaji": "oishii"
+        },
+        {
+          "id": 398,
+          "kana": "まずい",
+          "kanji": "不味い",
+          "english": "tastes awful",
+          "romaji": "mazui"
+        },
+        {
+          "id": 399,
+          "kana": "あまい",
+          "kanji": "甘い",
+          "english": "sweet",
+          "romaji": "amai"
+        },
+        {
+          "id": 400,
+          "kana": "からい",
+          "kanji": "辛い",
+          "english": "hot [spicy]",
+          "romaji": "karai"
+        },
+        {
+          "id": 401,
+          "kana": "しょっぱい",
+          "kanji": "塩っぱい",
+          "english": "salty",
+          "romaji": "shoppai"
+        },
+        {
+          "id": 402,
+          "kana": "にがい",
+          "kanji": "苦い",
+          "english": "bitter",
+          "romaji": "nigai"
+        },
+        {
+          "id": 403,
+          "kana": "うつくしい",
+          "kanji": "美しい",
+          "english": "beautiful",
+          "romaji": "utsukushii"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Feelings",
+      "words": [
+        {
+          "id": 404,
+          "kana": "うれしい",
+          "kanji": "嬉しい",
+          "english": "happy",
+          "romaji": "ureshii"
+        },
+        {
+          "id": 405,
+          "kana": "たのしい",
+          "kanji": "楽しい",
+          "english": "fun",
+          "romaji": "tanoshii"
+        },
+        {
+          "id": 406,
+          "kana": "かなしい",
+          "kanji": "悲しい",
+          "english": "sad",
+          "romaji": "kanashii"
+        },
+        {
+          "id": 407,
+          "kana": "いたい",
+          "kanji": "痛い",
+          "english": "painful",
+          "romaji": "itai"
+        },
+        {
+          "id": 408,
+          "kana": "かゆい",
+          "kanji": "痒い",
+          "english": "itchy",
+          "romaji": "kayui"
+        },
+        {
+          "id": 409,
+          "kana": "くさい",
+          "kanji": "臭い",
+          "english": "stinky",
+          "romaji": "kusai"
+        },
+        {
+          "id": 410,
+          "kana": "つらい",
+          "kanji": "辛い",
+          "english": "painful, heart-breaking",
+          "romaji": "tsurai"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Verbs",
+      "words": [
+        {
+          "id": 411,
+          "kana": "する",
+          "kanji": "",
+          "english": "to do",
+          "romaji": "suru"
+        },
+        {
+          "id": 412,
+          "kana": "やる",
+          "kanji": "",
+          "english": "to do",
+          "romaji": "yaru"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Existence",
+      "words": [
+        {
+          "id": 413,
+          "kana": "いる",
+          "kanji": "",
+          "english": "to exist [for animate objects]",
+          "romaji": "iru"
+        },
+        {
+          "id": 414,
+          "kana": "ある",
+          "kanji": "",
+          "english": "to exist [for inanimate objects]",
+          "romaji": "aru"
+        },
+        {
+          "id": 415,
+          "kana": "なる",
+          "kanji": "",
+          "english": "to become",
+          "romaji": "naru"
+        },
+        {
+          "id": 416,
+          "kana": "あらわれる",
+          "kanji": "現れる",
+          "english": "to appear",
+          "romaji": "arawareru"
+        },
+        {
+          "id": 417,
+          "kana": "いきる",
+          "kanji": "生きる",
+          "english": "to live",
+          "romaji": "ikiru"
+        },
+        {
+          "id": 418,
+          "kana": "しぬ",
+          "kanji": "死ぬ",
+          "english": "to die",
+          "romaji": "shinu"
+        },
+        {
+          "id": 419,
+          "kana": "こわれる",
+          "kanji": "壊れる",
+          "english": "to breakin",
+          "romaji": "kowareru"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Movement",
+      "words": [
+        {
+          "id": 420,
+          "kana": "いく",
+          "kanji": "行く",
+          "english": "to go",
+          "romaji": "iku"
+        },
+        {
+          "id": 421,
+          "kana": "くる",
+          "kanji": "来る",
+          "english": "to come",
+          "romaji": "kuru"
+        },
+        {
+          "id": 422,
+          "kana": "あるく",
+          "kanji": "歩く",
+          "english": "to walk",
+          "romaji": "aruku"
+        },
+        {
+          "id": 423,
+          "kana": "とぶ",
+          "kanji": "飛ぶ",
+          "english": "to jump, to fly",
+          "romaji": "tobu"
+        },
+        {
+          "id": 424,
+          "kana": "およぐ",
+          "kanji": "泳ぐ",
+          "english": "to swim",
+          "romaji": "oyogu"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Actions",
+      "words": [
+        {
+          "id": 425,
+          "kana": "うごく",
+          "kanji": "動く",
+          "english": "to movein",
+          "romaji": "ugoku"
+        },
+        {
+          "id": 426,
+          "kana": "おどる",
+          "kanji": "踊る",
+          "english": "to dance",
+          "romaji": "odoru"
+        },
+        {
+          "id": 427,
+          "kana": "ねる",
+          "kanji": "寝る",
+          "english": "to sleep",
+          "romaji": "neru"
+        },
+        {
+          "id": 428,
+          "kana": "うたう",
+          "kanji": "歌う",
+          "english": "to sing",
+          "romaji": "utau"
+        },
+        {
+          "id": 429,
+          "kana": "かむ",
+          "kanji": "噛む",
+          "english": "to bite",
+          "romaji": "kamu"
+        },
+        {
+          "id": 430,
+          "kana": "たべる",
+          "kanji": "食べる",
+          "english": "to eat",
+          "romaji": "taberu"
+        },
+        {
+          "id": 431,
+          "kana": "のむ",
+          "kanji": "飲む",
+          "english": "to drink",
+          "romaji": "nomu"
+        },
+        {
+          "id": 432,
+          "kana": "さわる",
+          "kanji": "触る",
+          "english": "to touch",
+          "romaji": "sawaru"
+        },
+        {
+          "id": 433,
+          "kana": "なげる",
+          "kanji": "投げる",
+          "english": "to throw",
+          "romaji": "nageru"
+        },
+        {
+          "id": 434,
+          "kana": "もつ",
+          "kanji": "持つ",
+          "english": "to hold",
+          "romaji": "motsu"
+        },
+        {
+          "id": 435,
+          "kana": "うつ",
+          "kanji": "打つ",
+          "english": "to hit, to strike",
+          "romaji": "utsu"
+        },
+        {
+          "id": 436,
+          "kana": "なぐる",
+          "kanji": "殴る",
+          "english": "to hit, to strike",
+          "romaji": "naguru"
+        },
+        {
+          "id": 437,
+          "kana": "さす",
+          "kanji": "指す",
+          "english": "to point",
+          "romaji": "sasu"
+        },
+        {
+          "id": 438,
+          "kana": "さす",
+          "kanji": "刺す",
+          "english": "to stab",
+          "romaji": "sasu"
+        },
+        {
+          "id": 439,
+          "kana": "さす",
+          "kanji": "差す",
+          "english": "to raise or extend one's hands",
+          "romaji": "sasu"
+        },
+        {
+          "id": 440,
+          "kana": "ける",
+          "kanji": "蹴る",
+          "english": "to kick",
+          "romaji": "keru"
+        },
+        {
+          "id": 441,
+          "kana": "すわる",
+          "kanji": "座る",
+          "english": "to sit",
+          "romaji": "suwaru"
+        },
+        {
+          "id": 442,
+          "kana": "たつ",
+          "kanji": "立つ",
+          "english": "to stand",
+          "romaji": "tatsu"
+        },
+        {
+          "id": 443,
+          "kana": "はしる",
+          "kanji": "走る",
+          "english": "to run",
+          "romaji": "hashiru"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Changes of state",
+      "words": [
+        {
+          "id": 444,
+          "kana": "あく",
+          "kanji": "空く",
+          "english": "to become unoccupied",
+          "romaji": "aku"
+        },
+        {
+          "id": 445,
+          "kana": "こむ",
+          "kanji": "込む",
+          "english": "to be crowded",
+          "romaji": "komu"
+        },
+        {
+          "id": 446,
+          "kana": "いる",
+          "kanji": "要る",
+          "english": "to need",
+          "romaji": "iru"
+        },
+        {
+          "id": 447,
+          "kana": "かわく",
+          "kanji": "乾く",
+          "english": "to become dry",
+          "romaji": "kawaku"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Senses",
+      "words": [
+        {
+          "id": 448,
+          "kana": "みる",
+          "kanji": "見る",
+          "english": "to see",
+          "romaji": "miru"
+        },
+        {
+          "id": 449,
+          "kana": "さわる",
+          "kanji": "触る",
+          "english": "to touch, to feel",
+          "romaji": "sawaru"
+        },
+        {
+          "id": 450,
+          "kana": "かぐ",
+          "kanji": "嗅ぐ",
+          "english": "to smell",
+          "romaji": "kagu"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Speech",
+      "words": [
+        {
+          "id": 451,
+          "kana": "いう",
+          "kanji": "言う",
+          "english": "to say",
+          "romaji": "iu"
+        },
+        {
+          "id": 452,
+          "kana": "はなす",
+          "kanji": "話す",
+          "english": "to speak",
+          "romaji": "hanasu"
+        },
+        {
+          "id": 453,
+          "kana": "かたる",
+          "kanji": "語る",
+          "english": "to tell",
+          "romaji": "kataru"
+        },
+        {
+          "id": 454,
+          "kana": "かく",
+          "kanji": "書く",
+          "english": "to write",
+          "romaji": "kaku"
+        },
+        {
+          "id": 455,
+          "kana": "よむ",
+          "kanji": "読む",
+          "english": "to read",
+          "romaji": "yomu"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Work",
+      "words": [
+        {
+          "id": 456,
+          "kana": "つかう",
+          "kanji": "使う",
+          "english": "to use",
+          "romaji": "tsukau"
+        },
+        {
+          "id": 457,
+          "kana": "すてる",
+          "kanji": "捨てる",
+          "english": "to discard, throw away",
+          "romaji": "suteru"
+        },
+        {
+          "id": 458,
+          "kana": "おく",
+          "kanji": "置く",
+          "english": "to put",
+          "romaji": "oku"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Emotions",
+      "words": [
+        {
+          "id": 459,
+          "kana": "なく",
+          "kanji": "泣く",
+          "english": "to cry",
+          "romaji": "naku"
+        },
+        {
+          "id": 460,
+          "kana": "わらう",
+          "kanji": "笑う",
+          "english": "to laugh",
+          "romaji": "warau"
+        },
+        {
+          "id": 461,
+          "kana": "おこる",
+          "kanji": "怒る",
+          "english": "to be angry",
+          "romaji": "okoru"
+        },
+        {
+          "id": 462,
+          "kana": "ほめる",
+          "kanji": "褒める",
+          "english": "to encourage",
+          "romaji": "homeru"
+        },
+        {
+          "id": 463,
+          "kana": "しかる",
+          "kanji": "叱る",
+          "english": "to scold",
+          "romaji": "shikaru"
+        },
+        {
+          "id": 464,
+          "kana": "よろこぶ",
+          "kanji": "喜ぶ",
+          "english": "to celebrate, to be jubilant, to have joy, to have delight, to have rapture",
+          "romaji": "yorokobu"
+        },
+        {
+          "id": 465,
+          "kana": "よろこび",
+          "kanji": "喜び",
+          "english": "joy, delight, rapture",
+          "romaji": "yorokobi"
+        },
+        {
+          "id": 466,
+          "kana": "なぐさめる",
+          "kanji": "慰める",
+          "english": "to console, to consolate, to provide empathy",
+          "romaji": "nagusameru"
+        },
+        {
+          "id": 467,
+          "kana": "あきる",
+          "kanji": "飽きる",
+          "english": "to be disinterested, to be bored, to be tired of, to be weary",
+          "romaji": "akiru"
+        },
+        {
+          "id": 468,
+          "kana": "おどろく",
+          "kanji": "驚く",
+          "english": "to be astonished, to be surprised, to be scared",
+          "romaji": "odoroku"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Activities",
+      "words": [
+        {
+          "id": 469,
+          "kana": "あう",
+          "kanji": "会う",
+          "english": "to meet, to interview",
+          "romaji": "au"
+        },
+        {
+          "id": 470,
+          "kana": "あける",
+          "kanji": "開ける",
+          "english": "to opentr, to unwraptr",
+          "romaji": "akeru"
+        },
+        {
+          "id": 471,
+          "kana": "あそぶ",
+          "kanji": "遊ぶ",
+          "english": "to play",
+          "romaji": "asobu"
+        },
+        {
+          "id": 472,
+          "kana": "あつまる",
+          "kanji": "集まる",
+          "english": "to gatherin",
+          "romaji": "atsumaru"
+        },
+        {
+          "id": 473,
+          "kana": "うる",
+          "kanji": "売る",
+          "english": "to sell",
+          "romaji": "uru"
+        },
+        {
+          "id": 474,
+          "kana": "える",
+          "kanji": "得る",
+          "english": "to obtain [some benefit or knowledge]",
+          "romaji": "eru"
+        },
+        {
+          "id": 475,
+          "kana": "おる",
+          "kanji": "折る",
+          "english": "to breaktr, to foldtr",
+          "romaji": "oru"
+        },
+        {
+          "id": 476,
+          "kana": "かう",
+          "kanji": "買う",
+          "english": "to buy",
+          "romaji": "kau"
+        },
+        {
+          "id": 477,
+          "kana": "きる",
+          "kanji": "切る",
+          "english": "to cut",
+          "romaji": "kiru"
+        },
+        {
+          "id": 478,
+          "kana": "きる",
+          "kanji": "着る",
+          "english": "to wear [on the upper body]",
+          "romaji": "kiru"
+        },
+        {
+          "id": 479,
+          "kana": "はく",
+          "kanji": "履く",
+          "english": "to wear [on the lower body]",
+          "romaji": "haku"
+        },
+        {
+          "id": 480,
+          "kana": "かえる",
+          "kanji": "変える",
+          "english": "to changetr",
+          "romaji": "kaeru"
+        },
+        {
+          "id": 481,
+          "kana": "かえる",
+          "kanji": "代える",
+          "english": "to exchange, to substitute, to replace",
+          "romaji": "kaeru"
+        },
+        {
+          "id": 482,
+          "kana": "しめる",
+          "kanji": "閉める",
+          "english": "to closetr",
+          "romaji": "shimeru"
+        },
+        {
+          "id": 483,
+          "kana": "しめる",
+          "kanji": "締める",
+          "english": "to tie, to fasten",
+          "romaji": "shimeru"
+        },
+        {
+          "id": 484,
+          "kana": "しめる",
+          "kanji": "占める",
+          "english": "to comprise, to account for",
+          "romaji": "shimeru"
+        },
+        {
+          "id": 485,
+          "kana": "しる",
+          "kanji": "知る",
+          "english": "to know",
+          "romaji": "shiru"
+        },
+        {
+          "id": 486,
+          "kana": "つかれる",
+          "kanji": "疲れる",
+          "english": "to get tired",
+          "romaji": "tsukareru"
+        },
+        {
+          "id": 487,
+          "kana": "でかける",
+          "kanji": "出掛ける",
+          "english": "to go out, to depart",
+          "romaji": "dekakeru"
+        },
+        {
+          "id": 488,
+          "kana": "はたらく",
+          "kanji": "働く",
+          "english": "to work [e.g., at a job]",
+          "romaji": "hataraku"
+        },
+        {
+          "id": 489,
+          "kana": "やすむ",
+          "kanji": "休む",
+          "english": "to rest, to take a break, to go to bed",
+          "romaji": "yasumu"
+        },
+        {
+          "id": 490,
+          "kana": "わかれる",
+          "kanji": "分かれる",
+          "english": "to split intoin, to be divided",
+          "romaji": "wakareru"
+        },
+        {
+          "id": 491,
+          "kana": "わかれる",
+          "kanji": "別れる",
+          "english": "to partin, to separatein, to break upin",
+          "romaji": "wakareru"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Adverbs",
+      "words": [
+        {
+          "id": 492,
+          "kana": "もう",
+          "kanji": "",
+          "english": "already",
+          "romaji": "mō"
+        },
+        {
+          "id": 493,
+          "kana": "まだ",
+          "kanji": "",
+          "english": "still, yet",
+          "romaji": "mada"
+        },
+        {
+          "id": 494,
+          "kana": "ずっと",
+          "kanji": "",
+          "english": "always",
+          "romaji": "zutto"
+        },
+        {
+          "id": 495,
+          "kana": "とても",
+          "kanji": "",
+          "english": "very",
+          "romaji": "totemo"
+        },
+        {
+          "id": 496,
+          "kana": "こう",
+          "kanji": "",
+          "english": "like this",
+          "romaji": "kō"
+        },
+        {
+          "id": 497,
+          "kana": "そう",
+          "kanji": "",
+          "english": "like that",
+          "romaji": "sō"
+        },
+        {
+          "id": 498,
+          "kana": "ああ",
+          "kanji": "",
+          "english": "in that other way",
+          "romaji": "ā"
+        },
+        {
+          "id": 499,
+          "kana": "どう",
+          "kanji": "",
+          "english": "how",
+          "romaji": "dō"
+        },
+        {
+          "id": 500,
+          "kana": "しばしば",
+          "kanji": "",
+          "english": "often",
+          "romaji": "shibashiba"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Pre-noun adjectival",
+      "words": [
+        {
+          "id": 501,
+          "kana": "この",
+          "kanji": "",
+          "english": "this",
+          "romaji": "kono"
+        },
+        {
+          "id": 502,
+          "kana": "その",
+          "kanji": "",
+          "english": "that",
+          "romaji": "sono"
+        },
+        {
+          "id": 503,
+          "kana": "あの",
+          "kanji": "",
+          "english": "that",
+          "romaji": "ano"
+        },
+        {
+          "id": 504,
+          "kana": "どの",
+          "kanji": "",
+          "english": "which",
+          "romaji": "dono"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Interjections",
+      "words": [
+        {
+          "id": 505,
+          "kana": "はい",
+          "kanji": "",
+          "english": "yes",
+          "romaji": "hai"
+        },
+        {
+          "id": 506,
+          "kana": "いいえ",
+          "kanji": "",
+          "english": "no",
+          "romaji": "iie"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Conjunctions",
+      "words": [
+        {
+          "id": 507,
+          "kana": "しかし",
+          "kanji": "",
+          "english": "but, however",
+          "romaji": "shikashi"
+        },
+        {
+          "id": 508,
+          "kana": "そして",
+          "kanji": "",
+          "english": "and then, Then…",
+          "romaji": "soshite"
+        },
+        {
+          "id": 509,
+          "kana": "それに",
+          "kanji": "",
+          "english": "besides",
+          "romaji": "soreni"
+        },
+        {
+          "id": 510,
+          "kana": "なぜなら",
+          "kanji": "",
+          "english": "that is because, being because",
+          "romaji": "nazenara"
+        }
+      ]
+    }
+  ]
+}
