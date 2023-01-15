@@ -8,18 +8,18 @@
         tools:context=".MainActivity">
     <Button
             android:layout_width="80dp"
-            android:layout_height="48dp"
+            android:layout_height="32dp"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.90"
-            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintVertical_bias="0.00"
             android:id="@+id/textViewRightCount"/>
     <Button
             android:layout_width="320dp"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
             android:text="Hello World!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -29,14 +29,14 @@
             android:id="@+id/textView0"/>
     <Button
             android:layout_width="320dp"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
             android:text=""
             android:onClick="romajiVisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.207"
+            app:layout_constraintVertical_bias="0.257"
             android:id="@+id/textView1"/>
     <Button
             android:layout_width="320dp"
@@ -46,7 +46,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.307"
+            app:layout_constraintVertical_bias="0.357"
             android:id="@+id/textViewDebug"/>
 <!--    <TextView-->
 <!--            android:text="TextView"-->

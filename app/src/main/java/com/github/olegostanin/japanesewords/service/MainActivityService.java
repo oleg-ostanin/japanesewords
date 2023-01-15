@@ -16,6 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -52,7 +53,7 @@ public class MainActivityService {
                 model = currentWord;
                 activityContext.getKana().setText(currentWord.getKana());
                 activityContext.getRomaji().setText(currentWord.getRomaji());
-                activityContext.getRomaji().setVisibility(View.INVISIBLE);
+                activityContext.getRomaji().setTextColor(Color.WHITE);
             } else {
                  model= uniqueModel();
             }
@@ -83,12 +84,13 @@ public class MainActivityService {
         if (currentWord.getLastAnswerCorrect()) {
             currentWord.setCorrectAnswersInARow(currentWord.getCorrectAnswersInARow() + 1);
         }
-        if (currentWord.getCorrectAnswersInARow() > 7) {
+        if (currentWord.getCorrectAnswersInARow() > 5) {
             currentWord.setShouldBeInQueue(false);
         }
-        if (currentWord.getShouldBeInQueue() && mistakes.size() <= 5) {
+        if (currentWord.getShouldBeInQueue() && mistakes.size() <= 5 && !mistakes.contains(currentWord)) {
             mistakes.add(currentWord);
         }
+        currentWord.setLastAnswerCorrect(true);
         currentWord.setCorrectAnswers(currentWord.getCorrectAnswers() + 1);
         rightCount++;
         activityContext.getRightCount().setText(String.valueOf(rightCount));
@@ -109,7 +111,6 @@ public class MainActivityService {
         currentWord.setLastAnswerCorrect(false);
         currentWord.setShouldBeInQueue(true);
         if (mistakes.size() <= 5 && !mistakes.contains(currentWord)) {
-//            activityContext.getDebug().setText("Adding to mistakes " + currentWord.getEnglish());
             mistakes.add(currentWord);
             setCounterToPollNextMistake();
         }
@@ -134,7 +135,7 @@ public class MainActivityService {
     }
 
     private void setCounterToPollNextMistake() {
-        final int toNextMistake = ThreadLocalRandom.current().nextInt(2);
+        final int toNextMistake = ThreadLocalRandom.current().nextInt(3);
         counterToPullNextMistake = counter + 2 + toNextMistake;
     }
 
@@ -153,8 +154,15 @@ public class MainActivityService {
     }
 
     private void debug() {
-//        String debug = String.format("Counter = %d mistake = %d", counter, counterToPullNextMistake);
-//        activityContext.getDebug().setText(debug);
+        StringBuilder sb = new StringBuilder();
+
+        for (WordModel wordModel : mistakes) {
+            sb.append(wordModel.getRomaji());
+            sb.append(";");
+        }
+
+        String debug = sb.toString();
+        //activityContext.getDebug().setText(debug);
     }
 
 }

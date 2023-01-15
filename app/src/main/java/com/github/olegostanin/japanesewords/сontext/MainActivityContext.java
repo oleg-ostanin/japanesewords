@@ -1,7 +1,7 @@
 package com.github.olegostanin.japanesewords.сontext;
 
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Button;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,11 +15,11 @@ import java.util.List;
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class MainActivityContext {
-    TextView rightCount;
-    TextView kana;
-    TextView romaji;
+    Button rightCount;
+    Button kana;
+    Button romaji;
 
-    TextView debug;
+    Button debug;
 
     List<Button> buttons;
 }

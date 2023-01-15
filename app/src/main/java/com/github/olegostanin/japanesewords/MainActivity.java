@@ -3,7 +3,7 @@ package com.github.olegostanin.japanesewords;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void romajiVisible(View view) {
-        final TextView romaji = (TextView) findViewById(R.id.textView1);
-        romaji.setVisibility(View.VISIBLE);
+        final Button romaji = (Button) findViewById(R.id.textView1);
+        romaji.setTextColor(Color.BLACK);
     }
 
     public void button0(View view) {
@@ -67,16 +67,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private MainActivityContext activityContext() {
-        final TextView kana = (TextView) findViewById(R.id.textView0);
-        final TextView romaji = (TextView) findViewById(R.id.textView1);
-        final TextView rightCount = (TextView) findViewById(R.id.textViewRightCount);
-        final TextView debug = (TextView) findViewById(R.id.textViewDebug);
+        final Button kana = (Button) findViewById(R.id.textView0);
+        final Button romaji = (Button) findViewById(R.id.textView1);
+        final Button rightCount = (Button) findViewById(R.id.textViewRightCount);
+        final Button debug = (Button) findViewById(R.id.textViewDebug);
+        rightCount.setBackgroundColor(Color.WHITE);
         rightCount.setTextSize(24F);
         rightCount.setGravity(5);
         rightCount.setTextColor(0xFF00FF99);
         kana.setTextSize(32F);
-        romaji.setTextSize(32F);
+        kana.setTextColor(Color.BLACK);
+
+        kana.setBackgroundColor(Color.WHITE);
+        romaji.setTextSize(26F);
+        romaji.setBackgroundColor(Color.WHITE);
         debug.setTextSize(10F);
+        debug.setTextColor(Color.BLACK);
+        debug.setBackgroundColor(Color.WHITE);
 
         return MainActivityContext.builder()
                 .rightCount(rightCount)
