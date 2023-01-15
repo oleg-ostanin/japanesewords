@@ -15,6 +15,7 @@ import java.util.List;
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class MainActivityContext {
+    TextView rightCount;
     TextView kana;
     TextView romaji;
 

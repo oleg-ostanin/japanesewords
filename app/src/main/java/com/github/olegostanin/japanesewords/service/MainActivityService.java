@@ -1,6 +1,7 @@
 package com.github.olegostanin.japanesewords.service;
 
 import android.graphics.Color;
+import android.view.View;
 import android.widget.Button;
 import com.github.olegostanin.japanesewords.model.WordCategory;
 import com.github.olegostanin.japanesewords.model.WordContainer;
@@ -34,6 +35,7 @@ public class MainActivityService {
     long counter = 0L;
     long counterToPullNextMistake = -1L;
     boolean atLeastOneMistake = false;
+    long rightCount = 0;
 
     public void setQuestionContext() {
         frameWords.clear();
@@ -50,6 +52,7 @@ public class MainActivityService {
                 model = currentWord;
                 activityContext.getKana().setText(currentWord.getKana());
                 activityContext.getRomaji().setText(currentWord.getRomaji());
+                activityContext.getRomaji().setVisibility(View.INVISIBLE);
             } else {
                  model= uniqueModel();
             }
@@ -67,6 +70,7 @@ public class MainActivityService {
     }
 
     public void handleAnswer(int buttonNum) {
+        debug();
         if (buttonNum != correctButton) {
             handleIncorrectAnswer(buttonNum);
         }
@@ -86,6 +90,8 @@ public class MainActivityService {
             mistakes.add(currentWord);
         }
         currentWord.setCorrectAnswers(currentWord.getCorrectAnswers() + 1);
+        rightCount++;
+        activityContext.getRightCount().setText(String.valueOf(rightCount));
         setQuestionContext();
     }
 
@@ -102,10 +108,11 @@ public class MainActivityService {
         currentWord.setIncorrectAnswers(currentWord.getIncorrectAnswers() + 1);
         currentWord.setLastAnswerCorrect(false);
         currentWord.setShouldBeInQueue(true);
-        if (mistakes.size() <= 5) {
+        if (mistakes.size() <= 5 && !mistakes.contains(currentWord)) {
+//            activityContext.getDebug().setText("Adding to mistakes " + currentWord.getEnglish());
             mistakes.add(currentWord);
+            setCounterToPollNextMistake();
         }
-
         atLeastOneMistake = true;
     }
 
@@ -118,13 +125,17 @@ public class MainActivityService {
             toReturn = mistakes.poll();
             if (!frameWords.contains(toReturn)) {
                 frameWords.add(toReturn);
-                final int toNextMistake = ThreadLocalRandom.current().nextInt(3);
-                counterToPullNextMistake = counterToPullNextMistake + 2 + toNextMistake;
+                setCounterToPollNextMistake();
                 return toReturn;
             }
         }
 
         return uniqueModel();
+    }
+
+    private void setCounterToPollNextMistake() {
+        final int toNextMistake = ThreadLocalRandom.current().nextInt(2);
+        counterToPullNextMistake = counter + 2 + toNextMistake;
     }
 
     private WordModel uniqueModel() {
@@ -139,6 +150,11 @@ public class MainActivityService {
     private WordModel randomModel() {
         final int modelIndex = ThreadLocalRandom.current().nextInt(wordModels.size());
         return wordModels.get(modelIndex);
+    }
+
+    private void debug() {
+//        String debug = String.format("Counter = %d mistake = %d", counter, counterToPullNextMistake);
+//        activityContext.getDebug().setText(debug);
     }
 
 }

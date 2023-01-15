@@ -6,7 +6,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <TextView
+    <Button
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.90"
+            app:layout_constraintVertical_bias="0.05"
+            android:id="@+id/textViewRightCount"/>
+    <Button
             android:layout_width="320dp"
             android:layout_height="48dp"
             android:text="Hello World!"
@@ -16,25 +27,26 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.127"
             android:id="@+id/textView0"/>
-    <TextView
+    <Button
             android:layout_width="320dp"
             android:layout_height="48dp"
-            android:text="Hello World!"
+            android:text=""
+            android:onClick="romajiVisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.207"
             android:id="@+id/textView1"/>
-    <TextView
+    <Button
             android:layout_width="320dp"
             android:layout_height="48dp"
-            android:text="Hello World!"
+            android:text=""
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.207"
+            app:layout_constraintVertical_bias="0.307"
             android:id="@+id/textViewDebug"/>
 <!--    <TextView-->
 <!--            android:text="TextView"-->

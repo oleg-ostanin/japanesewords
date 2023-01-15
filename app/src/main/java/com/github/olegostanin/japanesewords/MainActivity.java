@@ -1,5 +1,6 @@
 package com.github.olegostanin.japanesewords;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         service.setQuestionContext();
     }
 
+    public void romajiVisible(View view) {
+        final TextView romaji = (TextView) findViewById(R.id.textView1);
+        romaji.setVisibility(View.VISIBLE);
+    }
+
     public void button0(View view) {
         service.handleAnswer(0);
     }
@@ -63,12 +69,17 @@ public class MainActivity extends AppCompatActivity {
     private MainActivityContext activityContext() {
         final TextView kana = (TextView) findViewById(R.id.textView0);
         final TextView romaji = (TextView) findViewById(R.id.textView1);
+        final TextView rightCount = (TextView) findViewById(R.id.textViewRightCount);
         final TextView debug = (TextView) findViewById(R.id.textViewDebug);
+        rightCount.setTextSize(24F);
+        rightCount.setGravity(5);
+        rightCount.setTextColor(0xFF00FF99);
         kana.setTextSize(32F);
         romaji.setTextSize(32F);
         debug.setTextSize(10F);
 
         return MainActivityContext.builder()
+                .rightCount(rightCount)
                 .kana(kana)
                 .romaji(romaji)
                 .debug(debug)
