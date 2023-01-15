@@ -129,7 +129,7 @@ public class WordModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         WordModel model = (WordModel) o;
-        return id.equals(model.id);
+        return id.equals(model.id) || romaji.equals(model.romaji) || english.equals(model.english);
     }
 
     @Override
