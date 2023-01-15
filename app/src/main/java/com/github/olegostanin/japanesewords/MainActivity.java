@@ -63,12 +63,15 @@ public class MainActivity extends AppCompatActivity {
     private MainActivityContext activityContext() {
         final TextView kana = (TextView) findViewById(R.id.textView0);
         final TextView romaji = (TextView) findViewById(R.id.textView1);
+        final TextView debug = (TextView) findViewById(R.id.textViewDebug);
         kana.setTextSize(32F);
         romaji.setTextSize(32F);
+        debug.setTextSize(10F);
 
         return MainActivityContext.builder()
                 .kana(kana)
                 .romaji(romaji)
+                .debug(debug)
                 .buttons(buttons())
                 .build();
     }

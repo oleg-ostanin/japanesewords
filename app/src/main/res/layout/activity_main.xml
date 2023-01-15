@@ -14,7 +14,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.077" android:id="@+id/textView0"/>
+            app:layout_constraintVertical_bias="0.127"
+            android:id="@+id/textView0"/>
     <TextView
             android:layout_width="320dp"
             android:layout_height="48dp"
@@ -23,8 +24,18 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.157"
+            app:layout_constraintVertical_bias="0.207"
             android:id="@+id/textView1"/>
+    <TextView
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.207"
+            android:id="@+id/textViewDebug"/>
 <!--    <TextView-->
 <!--            android:text="TextView"-->
 <!--            android:layout_width="317dp"-->
@@ -44,7 +55,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.257"/>
+            app:layout_constraintVertical_bias="0.457"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
@@ -55,7 +66,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.357"/>
+            app:layout_constraintVertical_bias="0.557"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
@@ -65,7 +76,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.457"/>
+            app:layout_constraintVertical_bias="0.657"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
@@ -75,7 +86,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.557"/>
+            app:layout_constraintVertical_bias="0.757"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
@@ -85,7 +96,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.657"/>
+            app:layout_constraintVertical_bias="0.857"/>
     <Button
             android:text="Button"
             android:layout_width="320dp"
@@ -95,6 +106,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.757"/>
+            app:layout_constraintVertical_bias="0.957"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

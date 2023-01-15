@@ -7,7 +7,6 @@ import com.github.olegostanin.japanesewords.model.WordContainer;
 import com.github.olegostanin.japanesewords.model.WordModel;
 import com.github.olegostanin.japanesewords.сontext.MainActivityContext;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
@@ -17,7 +16,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
 
-@Builder
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class MainActivityService {
@@ -31,11 +29,11 @@ public class MainActivityService {
     final List<WordModel> wordModels = new ArrayList<>();
     WordModel currentWord;
 
-    int listSize = 0;
     int correctButton = Integer.MAX_VALUE;
 
     long counter = 0L;
-    long counterToPullNextMistake = 0L;
+    long counterToPullNextMistake = -1L;
+    boolean atLeastOneMistake = false;
 
     public void setQuestionContext() {
         frameWords.clear();
@@ -58,6 +56,7 @@ public class MainActivityService {
             button.setText(model.getEnglish());
         }
 
+        atLeastOneMistake = false;
         counter++;
     }
 
@@ -65,7 +64,6 @@ public class MainActivityService {
         for (WordCategory category : wordContainer.getCategories()) {
             wordModels.addAll(category.getWords());
         }
-        listSize = wordModels.size();
     }
 
     public void handleAnswer(int buttonNum) {
@@ -93,6 +91,11 @@ public class MainActivityService {
 
     private void handleIncorrectAnswer(final int buttonNum) {
         activityContext.getButtons().get(buttonNum).setBackgroundColor(Color.RED);
+
+        if (atLeastOneMistake) {
+            return;
+        }
+
         if (!currentWord.getLastAnswerCorrect()) {
             currentWord.setIncorrectAnswersInARow(currentWord.getIncorrectAnswersInARow() + 1);
         }
@@ -102,6 +105,8 @@ public class MainActivityService {
         if (mistakes.size() <= 5) {
             mistakes.add(currentWord);
         }
+
+        atLeastOneMistake = true;
     }
 
     private WordModel mistakeOrUnique() {

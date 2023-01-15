@@ -18,5 +18,7 @@ public class MainActivityContext {
     TextView kana;
     TextView romaji;
 
+    TextView debug;
+
     List<Button> buttons;
 }
