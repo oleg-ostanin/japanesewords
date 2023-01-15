@@ -82,13 +82,14 @@ public class MainActivityService {
     }
 
     private void handleCorrectAnswer() {
+        currentWord.setIncorrectAnswersInARow(0L);
         if (currentWord.getLastAnswerCorrect()) {
             currentWord.setCorrectAnswersInARow(currentWord.getCorrectAnswersInARow() + 1);
         }
         if (currentWord.getCorrectAnswersInARow() > 5) {
             currentWord.setShouldBeInQueue(false);
         }
-        if (currentWord.getShouldBeInQueue() && mistakes.size() <= 5 && !mistakes.contains(currentWord)) {
+        if (currentWord.getShouldBeInQueue() && mistakes.size() <= 4 && !mistakes.contains(currentWord)) {
             mistakes.add(currentWord);
         }
         currentWord.setLastAnswerCorrect(true);
@@ -108,6 +109,7 @@ public class MainActivityService {
         if (!currentWord.getLastAnswerCorrect()) {
             currentWord.setIncorrectAnswersInARow(currentWord.getIncorrectAnswersInARow() + 1);
         }
+        currentWord.setCorrectAnswersInARow(0L);
         currentWord.setIncorrectAnswers(currentWord.getIncorrectAnswers() + 1);
         currentWord.setLastAnswerCorrect(false);
         currentWord.setShouldBeInQueue(true);
@@ -159,6 +161,8 @@ public class MainActivityService {
 
         for (WordModel wordModel : mistakes) {
             sb.append(wordModel.getRomaji());
+            sb.append("-");
+            sb.append(wordModel.getCorrectAnswersInARow());
             sb.append(";");
         }
 
