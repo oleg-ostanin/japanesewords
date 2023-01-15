@@ -54,6 +54,7 @@ public class MainActivityService {
                 activityContext.getKana().setText(currentWord.getKana());
                 activityContext.getRomaji().setText(currentWord.getRomaji());
                 activityContext.getRomaji().setTextColor(Color.WHITE);
+                activityContext.getDebug().setTextColor(Color.WHITE);
             } else {
                  model= uniqueModel();
             }
@@ -162,7 +163,7 @@ public class MainActivityService {
         }
 
         String debug = sb.toString();
-        //activityContext.getDebug().setText(debug);
+        activityContext.getDebug().setText(debug);
     }
 
 }

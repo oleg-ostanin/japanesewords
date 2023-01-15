@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         romaji.setTextColor(Color.BLACK);
     }
 
+    public void debugVisible(View view) {
+        final Button debug = (Button) findViewById(R.id.textViewDebug);
+        debug.setTextColor(Color.BLACK);
+    }
+
     public void button0(View view) {
         service.handleAnswer(0);
     }
