@@ -412,7 +412,7 @@
           "id": 56,
           "kana": "こころ",
           "kanji": "心",
-          "english": "heart [as in feelings]",
+          "english": "heart [feelings]",
           "romaji": "kokoro"
         },
         {
@@ -976,7 +976,7 @@
           "id": 134,
           "kana": "くま",
           "kanji": "熊",
-          "english": "bea",
+          "english": "bear",
           "romaji": "kuma"
         }
       ]
@@ -1038,7 +1038,7 @@
           "id": 142,
           "kana": "だいこん",
           "kanji": "大根",
-          "english": "Japanese white radish",
+          "english": "white radish",
           "romaji": "daikon"
         },
         {
@@ -1433,7 +1433,7 @@
           "id": 195,
           "kana": "むこう",
           "kanji": "向こう",
-          "english": "the other side, opposite side",
+          "english": "other, opposite side",
           "romaji": "mukō"
         },
         {
@@ -1537,7 +1537,7 @@
           "id": 209,
           "kana": "どろ",
           "kanji": "泥",
-          "english": "mud, mire, clay, plaster",
+          "english": "mud, mire, clay",
           "romaji": "doro"
         },
         {
@@ -1586,7 +1586,7 @@
           "id": 216,
           "kana": "しお",
           "kanji": "塩",
-          "english": "salt [NaCl]",
+          "english": "salt",
           "romaji": "shio"
         }
       ]
@@ -1661,7 +1661,7 @@
           "id": 225,
           "kana": "けいざい",
           "kanji": "経済",
-          "english": "economy, economics",
+          "english": "economy",
           "romaji": "keizai"
         },
         {
@@ -1689,7 +1689,7 @@
           "id": 229,
           "kana": "やくしょ",
           "kanji": "役所",
-          "english": "local government office",
+          "english": "government office",
           "romaji": "yakusho"
         },
         {
@@ -1724,7 +1724,7 @@
           "id": 234,
           "kana": "さつ",
           "kanji": "札",
-          "english": "bill [of money, e.g., a thousand-yen bill]",
+          "english": "bill [of money]",
           "romaji": "satsu"
         },
         {
@@ -1738,7 +1738,7 @@
           "id": 236,
           "kana": "じどうはんばいき",
           "kanji": "自動販売機",
-          "english": "vending machine, slot machine",
+          "english": "vending machine",
           "romaji": "jidōhanbaiki"
         },
         {
@@ -1917,7 +1917,7 @@
           "id": 259,
           "kana": "ぶんぼうぐ",
           "kanji": "文房具",
-          "english": "stationery ",
+          "english": "stationery",
           "romaji": "bunbōgu"
         },
         {
@@ -1959,7 +1959,7 @@
           "id": 265,
           "kana": "ふで",
           "kanji": "筆",
-          "english": "brush for writing or painting",
+          "english": "brush for painting",
           "romaji": "fude"
         },
         {
@@ -2187,14 +2187,14 @@
           "id": 295,
           "kana": "もじ",
           "kanji": "文字",
-          "english": "letter, character, script",
+          "english": "letter, character",
           "romaji": "moji"
         },
         {
           "id": 296,
           "kana": "じ",
           "kanji": "字",
-          "english": "a letter, character",
+          "english": "letter, character",
           "romaji": "ji"
         },
         {
@@ -2208,14 +2208,14 @@
           "id": 298,
           "kana": "ひらがな",
           "kanji": "平仮名",
-          "english": "hiragana syllabary characters",
+          "english": "hiragana",
           "romaji": "hiragana"
         },
         {
           "id": 299,
           "kana": "カタカナ",
           "kanji": "片仮名",
-          "english": "katakana syllabary characters",
+          "english": "katakana",
           "romaji": "katakana"
         },
         {
@@ -2236,7 +2236,7 @@
           "id": 302,
           "kana": "ローマ字",
           "kanji": "",
-          "english": "Roman characters, Latin script",
+          "english": "Roman characters",
           "romaji": "rōmaji"
         },
         {
@@ -2596,70 +2596,70 @@
           "id": 350,
           "kana": "ひとつ",
           "kanji": "一つ",
-          "english": "one, one thing",
+          "english": "one thing",
           "romaji": "hitotsu"
         },
         {
           "id": 351,
           "kana": "ふたつ",
           "kanji": "二つ",
-          "english": "two, two things",
+          "english": "two things",
           "romaji": "futatsu"
         },
         {
           "id": 352,
           "kana": "みっつ",
           "kanji": "三つ",
-          "english": "three, three things",
+          "english": "three things",
           "romaji": "mittsu"
         },
         {
           "id": 353,
           "kana": "よっつ",
           "kanji": "四つ",
-          "english": "four, four things",
+          "english": "four things",
           "romaji": "yottsu"
         },
         {
           "id": 354,
           "kana": "いつつ",
           "kanji": "五つ",
-          "english": "five, five things",
+          "english": "five things",
           "romaji": "itsutsu"
         },
         {
           "id": 355,
           "kana": "むっつ",
           "kanji": "六つ",
-          "english": "six, six things",
+          "english": "six things",
           "romaji": "muttsu"
         },
         {
           "id": 356,
           "kana": "ななつ",
           "kanji": "七つ",
-          "english": "seven, seven things",
+          "english": "seven things",
           "romaji": "nanatsu"
         },
         {
           "id": 357,
           "kana": "やっつ",
           "kanji": "八つ",
-          "english": "eight, eight things",
+          "english": "eight things",
           "romaji": "yattsu"
         },
         {
           "id": 358,
           "kana": "ここのつ",
           "kanji": "九つ",
-          "english": "nine, nine things",
+          "english": "nine things",
           "romaji": "kokonotsu"
         },
         {
           "id": 359,
           "kana": "とお",
           "kanji": "十",
-          "english": "ten, ten things",
+          "english": "ten things",
           "romaji": "tō"
         }
       ]
@@ -2700,28 +2700,28 @@
           "id": 364,
           "kana": "こちら",
           "kanji": "こっち",
-          "english": "this direction, thing, person, or place",
+          "english": "this something",
           "romaji": "kochira"
         },
         {
           "id": 365,
           "kana": "そちら",
           "kanji": "そっち",
-          "english": "that direction, thing, person, or place",
+          "english": "that something",
           "romaji": "sochira"
         },
         {
           "id": 366,
           "kana": "あちら",
           "kanji": "あっち",
-          "english": "that direction, thing, person, or place over there",
+          "english": "that something",
           "romaji": "achira"
         },
         {
           "id": 367,
           "kana": "どちら",
           "kanji": "どっち",
-          "english": "which direction, thing, person, or place",
+          "english": "which something",
           "romaji": "dochira"
         },
         {
@@ -3034,7 +3034,7 @@
           "id": 410,
           "kana": "つらい",
           "kanji": "辛い",
-          "english": "painful, heart-breaking",
+          "english": "painful",
           "romaji": "tsurai"
         }
       ]
@@ -3067,14 +3067,14 @@
           "id": 413,
           "kana": "いる",
           "kanji": "",
-          "english": "to exist [for animate objects]",
+          "english": "to exist [animate]",
           "romaji": "iru"
         },
         {
           "id": 414,
           "kana": "ある",
           "kanji": "",
-          "english": "to exist [for inanimate objects]",
+          "english": "to exist [inanimate]",
           "romaji": "aru"
         },
         {
@@ -3109,7 +3109,7 @@
           "id": 419,
           "kana": "こわれる",
           "kanji": "壊れる",
-          "english": "to breakin",
+          "english": "to break [intr]",
           "romaji": "kowareru"
         }
       ]
@@ -3163,7 +3163,7 @@
           "id": 425,
           "kana": "うごく",
           "kanji": "動く",
-          "english": "to movein",
+          "english": "to move in",
           "romaji": "ugoku"
         },
         {
@@ -3261,7 +3261,7 @@
           "id": 439,
           "kana": "さす",
           "kanji": "差す",
-          "english": "to raise or extend one's hands",
+          "english": "to raise hands",
           "romaji": "sasu"
         },
         {
@@ -3411,7 +3411,7 @@
           "id": 457,
           "kana": "すてる",
           "kanji": "捨てる",
-          "english": "to discard, throw away",
+          "english": "to throw away",
           "romaji": "suteru"
         },
         {
@@ -3466,35 +3466,35 @@
           "id": 464,
           "kana": "よろこぶ",
           "kanji": "喜ぶ",
-          "english": "to celebrate, to be jubilant, to have joy, to have delight, to have rapture",
+          "english": "to have joy",
           "romaji": "yorokobu"
         },
         {
           "id": 465,
           "kana": "よろこび",
           "kanji": "喜び",
-          "english": "joy, delight, rapture",
+          "english": "joy, delight",
           "romaji": "yorokobi"
         },
         {
           "id": 466,
           "kana": "なぐさめる",
           "kanji": "慰める",
-          "english": "to console, to consolate, to provide empathy",
+          "english": "to provide empathy",
           "romaji": "nagusameru"
         },
         {
           "id": 467,
           "kana": "あきる",
           "kanji": "飽きる",
-          "english": "to be disinterested, to be bored, to be tired of, to be weary",
+          "english": "to be tired of",
           "romaji": "akiru"
         },
         {
           "id": 468,
           "kana": "おどろく",
           "kanji": "驚く",
-          "english": "to be astonished, to be surprised, to be scared",
+          "english": "to be astonished",
           "romaji": "odoroku"
         }
       ]
@@ -3507,14 +3507,14 @@
           "id": 469,
           "kana": "あう",
           "kanji": "会う",
-          "english": "to meet, to interview",
+          "english": "to meet",
           "romaji": "au"
         },
         {
           "id": 470,
           "kana": "あける",
           "kanji": "開ける",
-          "english": "to opentr, to unwraptr",
+          "english": "to open [tr]",
           "romaji": "akeru"
         },
         {
@@ -3528,7 +3528,7 @@
           "id": 472,
           "kana": "あつまる",
           "kanji": "集まる",
-          "english": "to gatherin",
+          "english": "to gather [intr]",
           "romaji": "atsumaru"
         },
         {
@@ -3542,14 +3542,14 @@
           "id": 474,
           "kana": "える",
           "kanji": "得る",
-          "english": "to obtain [some benefit or knowledge]",
+          "english": "to obtain benefit or knowledge",
           "romaji": "eru"
         },
         {
           "id": 475,
           "kana": "おる",
           "kanji": "折る",
-          "english": "to breaktr, to foldtr",
+          "english": "to break, to fold [tr]",
           "romaji": "oru"
         },
         {
@@ -3570,14 +3570,14 @@
           "id": 478,
           "kana": "きる",
           "kanji": "着る",
-          "english": "to wear [on the upper body]",
+          "english": "to wear [upper body]",
           "romaji": "kiru"
         },
         {
           "id": 479,
           "kana": "はく",
           "kanji": "履く",
-          "english": "to wear [on the lower body]",
+          "english": "to wear [lower body]",
           "romaji": "haku"
         },
         {
@@ -3591,14 +3591,14 @@
           "id": 481,
           "kana": "かえる",
           "kanji": "代える",
-          "english": "to exchange, to substitute, to replace",
+          "english": "to exchange, to replace",
           "romaji": "kaeru"
         },
         {
           "id": 482,
           "kana": "しめる",
           "kanji": "閉める",
-          "english": "to closetr",
+          "english": "to close [tr]",
           "romaji": "shimeru"
         },
         {
@@ -3640,28 +3640,28 @@
           "id": 488,
           "kana": "はたらく",
           "kanji": "働く",
-          "english": "to work [e.g., at a job]",
+          "english": "to work",
           "romaji": "hataraku"
         },
         {
           "id": 489,
           "kana": "やすむ",
           "kanji": "休む",
-          "english": "to rest, to take a break, to go to bed",
+          "english": "to rest",
           "romaji": "yasumu"
         },
         {
           "id": 490,
           "kana": "わかれる",
           "kanji": "分かれる",
-          "english": "to split intoin, to be divided",
+          "english": "to split, to be divided [intr]",
           "romaji": "wakareru"
         },
         {
           "id": 491,
           "kana": "わかれる",
           "kanji": "別れる",
-          "english": "to partin, to separatein, to break upin",
+          "english": "to part, to separate [intr]",
           "romaji": "wakareru"
         }
       ]
@@ -3818,7 +3818,7 @@
           "id": 510,
           "kana": "なぜなら",
           "kanji": "",
-          "english": "that is because, being because",
+          "english": "that is because",
           "romaji": "nazenara"
         }
       ]
