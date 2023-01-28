@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class WordModel {
     private Long id;
+
     private String kana;
     private String kanji;
     private String english;
@@ -12,11 +13,8 @@ public class WordModel {
     private Long correctAnswers = 0L;
     private Long correctAnswersInARow = 0L;
     private Long lastCorrectAnswerTs = 0L;
-    private Long incorrectAnswers = 0L;
-    private Long incorrectAnswersInARow = 0L;
-    private Long lastIncorrectAnswerTs = 0L;
 
-    private Boolean lastAnswerCorrect = false;
+    private Boolean lastAnswerCorrect = true;
     private Boolean shouldBeInQueue = false;
 
 
@@ -84,30 +82,6 @@ public class WordModel {
         this.lastCorrectAnswerTs = lastCorrectAnswerTs;
     }
 
-    public Long getIncorrectAnswers() {
-        return incorrectAnswers;
-    }
-
-    public void setIncorrectAnswers(Long incorrectAnswers) {
-        this.incorrectAnswers = incorrectAnswers;
-    }
-
-    public Long getIncorrectAnswersInARow() {
-        return incorrectAnswersInARow;
-    }
-
-    public void setIncorrectAnswersInARow(Long incorrectAnswersInARow) {
-        this.incorrectAnswersInARow = incorrectAnswersInARow;
-    }
-
-    public Long getLastIncorrectAnswerTs() {
-        return lastIncorrectAnswerTs;
-    }
-
-    public void setLastIncorrectAnswerTs(Long lastIncorrectAnswerTs) {
-        this.lastIncorrectAnswerTs = lastIncorrectAnswerTs;
-    }
-
     public Boolean getLastAnswerCorrect() {
         return lastAnswerCorrect;
     }
@@ -122,6 +96,10 @@ public class WordModel {
 
     public void setShouldBeInQueue(Boolean shouldBeInQueue) {
         this.shouldBeInQueue = shouldBeInQueue;
+    }
+
+    public void incrementCorrectAnswersInARow() {
+        correctAnswersInARow++;
     }
 
     @Override

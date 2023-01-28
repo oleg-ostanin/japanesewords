@@ -6,6 +6,7 @@ import android.widget.Button;
 import com.github.olegostanin.japanesewords.model.WordCategory;
 import com.github.olegostanin.japanesewords.model.WordContainer;
 import com.github.olegostanin.japanesewords.model.WordModel;
+import com.github.olegostanin.japanesewords.model.WordStat;
 import com.github.olegostanin.japanesewords.сontext.MainActivityContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.experimental.FieldDefaults;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -24,6 +26,8 @@ public class MainActivityService {
     final MainActivityContext activityContext;
 
     final WordContainer wordContainer;
+
+    Map<Long, WordStat> wordStatMap;
 
     final List<WordModel> frameWords = new ArrayList<>();
     final Queue<WordModel> mistakes = new LinkedList<>();
@@ -45,7 +49,7 @@ public class MainActivityService {
         for (int i = 0; i < buttons.size(); i++) {
             final Button button = buttons.get(i);
             button.setBackgroundColor(Color.GRAY);
-            button.setTextSize(24F);
+            button.setTextSize(22F);
 
             final WordModel model;
             if (i == correctButton) {
@@ -58,6 +62,9 @@ public class MainActivityService {
             } else {
                  model= uniqueModel();
             }
+            if (model.getEnglish().length() > 19) {
+                button.setTextSize(16F);
+            }
             button.setText(model.getEnglish());
         }
 
@@ -66,8 +73,21 @@ public class MainActivityService {
     }
 
     public void initModels() {
+        wordStatMap = activityContext.getWordStatMapWrapper().getWordStatMap();
+
         for (WordCategory category : wordContainer.getCategories()) {
-            wordModels.addAll(category.getWords());
+            for (WordModel model : category.getWords()) {
+                wordModels.add(model);
+                final long id = model.getId();
+                if (wordStatMap.containsKey(id)) {
+                    final WordStat wordStat = wordStatMap.get(model.getId());
+                    if (wordStat == null) {
+                        continue;
+                    }
+                    model.setCorrectAnswersInARow(wordStat.getA());
+                    model.setLastCorrectAnswerTs(wordStat.getTs());
+                }
+            }
         }
     }
 
@@ -82,9 +102,8 @@ public class MainActivityService {
     }
 
     private void handleCorrectAnswer() {
-        currentWord.setIncorrectAnswersInARow(0L);
         if (currentWord.getLastAnswerCorrect()) {
-            currentWord.setCorrectAnswersInARow(currentWord.getCorrectAnswersInARow() + 1);
+            currentWord.incrementCorrectAnswersInARow();
         }
         if (currentWord.getCorrectAnswersInARow() > 5) {
             currentWord.setShouldBeInQueue(false);
@@ -96,6 +115,7 @@ public class MainActivityService {
         currentWord.setCorrectAnswers(currentWord.getCorrectAnswers() + 1);
         rightCount++;
         activityContext.getRightCount().setText(String.valueOf(rightCount));
+        putCurrentWordInWordStatMap();
         setQuestionContext();
     }
 
@@ -106,18 +126,20 @@ public class MainActivityService {
             return;
         }
 
-        if (!currentWord.getLastAnswerCorrect()) {
-            currentWord.setIncorrectAnswersInARow(currentWord.getIncorrectAnswersInARow() + 1);
-        }
         currentWord.setCorrectAnswersInARow(0L);
-        currentWord.setIncorrectAnswers(currentWord.getIncorrectAnswers() + 1);
         currentWord.setLastAnswerCorrect(false);
         currentWord.setShouldBeInQueue(true);
         if (mistakes.size() <= 5 && !mistakes.contains(currentWord)) {
             mistakes.add(currentWord);
             setCounterToPollNextMistake();
         }
+        putCurrentWordInWordStatMap();
         atLeastOneMistake = true;
+    }
+
+    private void putCurrentWordInWordStatMap() {
+        wordStatMap.put(currentWord.getId(), WordStat.of(currentWord.getId(), currentWord.getCorrectAnswersInARow(),
+                System.currentTimeMillis()));
     }
 
     private WordModel mistakeOrUnique() {

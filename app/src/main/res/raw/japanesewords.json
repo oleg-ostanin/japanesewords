@@ -2763,7 +2763,7 @@
           "id": 373,
           "kana": "げんざい",
           "kanji": "現在",
-          "english": "now",
+          "english": "current",
           "romaji": "genzai"
         },
         {
@@ -3163,7 +3163,7 @@
           "id": 425,
           "kana": "うごく",
           "kanji": "動く",
-          "english": "to move in",
+          "english": "to move [intr]",
           "romaji": "ugoku"
         },
         {
@@ -3584,7 +3584,7 @@
           "id": 480,
           "kana": "かえる",
           "kanji": "変える",
-          "english": "to changetr",
+          "english": "to change [tr]",
           "romaji": "kaeru"
         },
         {
@@ -3820,6 +3820,18 @@
           "kanji": "",
           "english": "that is because",
           "romaji": "nazenara"
+        }
+      ]
+    },{
+      "id": 47,
+      "name": "Custom",
+      "words": [
+        {
+          "id": 511,
+          "kana": "めつき",
+          "kanji": "目つき",
+          "english": "look",
+          "romaji": "metsuki"
         }
       ]
     }
