@@ -1,28 +1,42 @@
 package com.github.olegostanin.japanesewords.service;
 
 import android.graphics.Color;
-import android.view.View;
 import android.widget.Button;
+import com.github.olegostanin.japanesewords.comparator.CorrectAnswersComparator;
+import com.github.olegostanin.japanesewords.comparator.OrderComparator;
 import com.github.olegostanin.japanesewords.model.WordCategory;
 import com.github.olegostanin.japanesewords.model.WordContainer;
 import com.github.olegostanin.japanesewords.model.WordModel;
 import com.github.olegostanin.japanesewords.model.WordStat;
+import com.github.olegostanin.japanesewords.provider.RandomIndexProvider;
 import com.github.olegostanin.japanesewords.сontext.MainActivityContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class MainActivityService {
+    /**
+     * If the number of correct answers in a row is more than this value the word is considered as learned.
+     */
+    static final long LEARNED = 20L;
+
+    /**
+     * Number of words in current question list.
+     */
+    static final int QUESTION_LIST_SIZE = 200;
+
+    final RandomIndexProvider indexProvider = new RandomIndexProvider(QUESTION_LIST_SIZE);
     final MainActivityContext activityContext;
 
     final WordContainer wordContainer;
@@ -32,17 +46,25 @@ public class MainActivityService {
     final List<WordModel> frameWords = new ArrayList<>();
     final Queue<WordModel> mistakes = new LinkedList<>();
 
-    final List<WordModel> wordModels = new ArrayList<>();
+    final List<WordModel> allWords = new ArrayList<>(6000);
+    final List<WordModel> wordsToLearn = new ArrayList<>();
+    final List<WordModel> learnedWords = new ArrayList<>();
+    final List<Integer> distributedIndex = new ArrayList<>();
+    final Comparator<WordModel> correctAnswersComparator = new CorrectAnswersComparator();
     WordModel currentWord;
 
     int correctButton = Integer.MAX_VALUE;
 
     long counter = 0L;
+
     long counterToPullNextMistake = -1L;
     boolean atLeastOneMistake = false;
     long rightCount = 0;
 
     public void setQuestionContext() {
+        if (counter % 10 == 0) {
+            Collections.sort(wordsToLearn, correctAnswersComparator);
+        }
         frameWords.clear();
         correctButton = ThreadLocalRandom.current().nextInt(activityContext.getButtons().size());
         List<Button> buttons = activityContext.getButtons();
@@ -55,17 +77,23 @@ public class MainActivityService {
             if (i == correctButton) {
                 currentWord = mistakeOrUnique();
                 model = currentWord;
-                activityContext.getKana().setText(currentWord.getKana());
+
+                final String kana = currentWord.getKana();
+                final String kanji = currentWord.getKanji();
+                final String kanaPlusKanji = kana + "    " + currentWord.getKanji();
+                final String question = (kana.length() < 7 && !kanji.isEmpty()) ? kanaPlusKanji : kana;
+
+                activityContext.getKana().setText(question);
                 activityContext.getRomaji().setText(currentWord.getRomaji());
                 activityContext.getRomaji().setTextColor(Color.WHITE);
                 activityContext.getDebug().setTextColor(Color.WHITE);
             } else {
                  model= uniqueModel();
             }
-            if (model.getEnglish().length() > 19) {
+            if (model.getEnglish().get(0).length() > 19) {
                 button.setTextSize(16F);
             }
-            button.setText(model.getEnglish());
+            button.setText(model.getEnglish().get(0));
         }
 
         atLeastOneMistake = false;
@@ -77,7 +105,7 @@ public class MainActivityService {
 
         for (WordCategory category : wordContainer.getCategories()) {
             for (WordModel model : category.getWords()) {
-                wordModels.add(model);
+                allWords.add(model);
                 final long id = model.getId();
                 if (wordStatMap.containsKey(id)) {
                     final WordStat wordStat = wordStatMap.get(model.getId());
@@ -88,6 +116,34 @@ public class MainActivityService {
                     model.setLastCorrectAnswerTs(wordStat.getTs());
                 }
             }
+        }
+
+        Collections.sort(allWords, new OrderComparator());
+
+        for (int i = 0; wordsToLearn.size() < QUESTION_LIST_SIZE; i++) {
+            final WordModel iWord = allWords.get(i);
+            if (iWord.getCorrectAnswersInARow() <= LEARNED) {
+                addDistributedIndex(wordsToLearn.size());
+                wordsToLearn.add(allWords.get(i));
+            }
+            else {
+                learnedWords.add(iWord);
+            }
+        }
+
+        activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
+    }
+
+    private void addDistributedIndex(int index) {
+        int num = 0;
+        if (index == 0) {
+            num = QUESTION_LIST_SIZE * 2;
+        }
+        else {
+            num = Math.max(1, QUESTION_LIST_SIZE / index);
+        }
+        for (int i = 0; i < num; i++) {
+            distributedIndex.add(index);
         }
     }
 
@@ -104,6 +160,12 @@ public class MainActivityService {
     private void handleCorrectAnswer() {
         if (currentWord.getLastAnswerCorrect()) {
             currentWord.incrementCorrectAnswersInARow();
+            if (currentWord.getCorrectAnswersInARow() > LEARNED) {
+                wordsToLearn.remove(currentWord);
+                initModels();
+                learnedWords.add(currentWord);
+                activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
+            }
         }
         if (currentWord.getCorrectAnswersInARow() > 5) {
             currentWord.setShouldBeInQueue(false);
@@ -174,15 +236,16 @@ public class MainActivityService {
     }
 
     private WordModel randomModel() {
-        final int modelIndex = ThreadLocalRandom.current().nextInt(wordModels.size());
-        return wordModels.get(modelIndex);
+        final int distributed = ThreadLocalRandom.current().nextInt(distributedIndex.size());
+        final int modelIndex = distributedIndex.get(distributed);
+        return wordsToLearn.get(modelIndex);
     }
 
     private void debug() {
         StringBuilder sb = new StringBuilder();
 
         for (WordModel wordModel : mistakes) {
-            sb.append(wordModel.getRomaji());
+            sb.append(wordModel.getKana());
             sb.append("-");
             sb.append(wordModel.getCorrectAnswersInARow());
             sb.append(";");
@@ -190,6 +253,37 @@ public class MainActivityService {
 
         String debug = sb.toString();
         activityContext.getDebug().setText(debug);
+    }
+
+    private void debugSort() {
+        StringBuilder sb = new StringBuilder();
+
+        for (WordModel wordModel : wordsToLearn) {
+            String english = wordModel.getEnglish().get(0);
+
+            if (english.length() > 7) {
+                english = english.substring(0, 6);
+            }
+
+            sb.append(english);
+            sb.append("-");
+            sb.append(wordModel.getCorrectAnswersInARow());
+            sb.append(";");
+        }
+
+        String debug = sb.toString();
+        activityContext.getDebug().setText(debug);
+    }
+
+    public String meanings() {
+        StringBuilder sb = new StringBuilder();
+
+        for (String translation : currentWord.getEnglish()) {
+            sb.append(translation);
+            sb.append("\n");
+        }
+
+        return sb.toString();
     }
 
 }

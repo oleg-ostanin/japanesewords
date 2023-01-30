@@ -40,12 +40,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        try {
-            testWrite();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         WordContainer wordContainer = readWordContainer();
         readWordStatMap();
 
@@ -69,9 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     private WordContainer readWordContainer() {
         try {
-            final InputStream ins = getResources().openRawResource(R.raw.japanesewords);
+            final InputStream ins = getResources().openRawResource(R.raw.japanesewords4999new);
             return mapper.readValue(ins, WordContainer.class);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -82,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             File sdCard = Environment.getExternalStorageDirectory();
             File dir = new File (sdCard.getAbsolutePath() + WORD_STAT_DIR);
-            dir.mkdirs();
             File file = new File(dir, WORD_STAT_FILE);
 
             if(!file.exists()) {
@@ -124,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
         debug.setTextColor(Color.BLACK);
     }
 
+    public void meanings(View view) {
+        final String meanings = service.meanings();
+        Toast.makeText(this, meanings, Toast.LENGTH_LONG).show();
+    }
+
     public void button0(View view) {
         service.handleAnswer(0);
     }
@@ -152,11 +149,18 @@ public class MainActivity extends AppCompatActivity {
         final Button kana = (Button) findViewById(R.id.textView0);
         final Button romaji = (Button) findViewById(R.id.textView1);
         final Button rightCount = (Button) findViewById(R.id.textViewRightCount);
+        final Button learnedWords = (Button) findViewById(R.id.textViewLearnedWords);
         final Button debug = (Button) findViewById(R.id.textViewDebug);
         rightCount.setBackgroundColor(Color.WHITE);
         rightCount.setTextSize(24F);
         rightCount.setGravity(5);
         rightCount.setTextColor(0xFF00FF99);
+
+        learnedWords.setBackgroundColor(Color.WHITE);
+        learnedWords.setTextSize(24F);
+        learnedWords.setGravity(5);
+        learnedWords.setTextColor(0xFF00FF99);
+
         kana.setTextSize(32F);
         kana.setTextColor(Color.BLACK);
 
@@ -170,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         return MainActivityContext.builder()
                 .wordStatMapWrapper(wordStatMapWrapper)
                 .rightCount(rightCount)
+                .learnedWords(learnedWords)
                 .kana(kana)
                 .romaji(romaji)
                 .debug(debug)
@@ -188,61 +193,5 @@ public class MainActivity extends AppCompatActivity {
         buttons.add((Button) findViewById(R.id.button5));
         
         return buttons;
-    }
-
-    private void testWrite() throws Exception {
-        File sdCard = Environment.getExternalStorageDirectory();
-        File dir = new File (sdCard.getAbsolutePath() + "/dir1/dir2");
-        dir.mkdirs();
-        File file = new File(dir, "filename.txt");
-
-        FileOutputStream f = new FileOutputStream(file);
-
-        f.write(42);
-        f.flush();
-        f.close();
-    }
-
-    // write text to file
-    public void write() {
-        // add-write text into file
-        try {
-            FileOutputStream fileout=openFileOutput("mytextfile.txt", MODE_WORLD_WRITEABLE);
-            OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
-            outputWriter.write("att");
-            outputWriter.close();
-
-            //display file saved message
-            Toast.makeText(getBaseContext(), "File saved successfully!",
-                    Toast.LENGTH_SHORT).show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Read text from file
-    public void ReadBtn(View v) {
-        //reading text from file
-        try {
-            FileInputStream fileIn=openFileInput("mytextfile.txt");
-            InputStreamReader InputRead= new InputStreamReader(fileIn);
-
-//            char[] inputBuffer= new char[READ_BLOCK_SIZE];
-//            String s="";
-//            int charRead;
-//
-//            while ((charRead=InputRead.read(inputBuffer))>0) {
-//                // char to string conversion
-//                String readstring=String.copyValueOf(inputBuffer,0,charRead);
-//                s +=readstring;
-//            }
-            InputRead.close();
-//            textmsg.setText(s);
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }

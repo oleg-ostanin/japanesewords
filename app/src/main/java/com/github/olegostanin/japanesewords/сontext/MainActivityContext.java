@@ -22,6 +22,7 @@ public class MainActivityContext {
     WordStatMapWrapper wordStatMapWrapper;
 
     Button rightCount;
+    Button learnedWords;
     Button kana;
     Button romaji;
 

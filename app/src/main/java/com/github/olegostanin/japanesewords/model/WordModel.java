@@ -1,13 +1,14 @@
 package com.github.olegostanin.japanesewords.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class WordModel {
     private Long id;
-
+    private Long order;
     private String kana;
     private String kanji;
-    private String english;
+    private List<String> english;
     private String romaji;
 
     private Long correctAnswers = 0L;
@@ -26,6 +27,14 @@ public class WordModel {
         this.id = id;
     }
 
+    public Long getOrder() {
+        return order;
+    }
+
+    public void setOrder(Long order) {
+        this.order = order;
+    }
+
     public String getKana() {
         return kana;
     }
@@ -42,11 +51,11 @@ public class WordModel {
         this.kanji = kanji;
     }
 
-    public String getEnglish() {
+    public List<String> getEnglish() {
         return english;
     }
 
-    public void setEnglish(String english) {
+    public void setEnglish(List<String> english) {
         this.english = english;
     }
 
@@ -107,11 +116,14 @@ public class WordModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         WordModel model = (WordModel) o;
-        return id.equals(model.id) || romaji.equals(model.romaji) || english.equals(model.english);
+        if (kanji != null && !kanji.isEmpty() && kanji.equals(model.kanji)) {
+            return true;
+        }
+        return id.equals(model.id) || romaji.equals(model.romaji) || english.get(0).equals(model.english.get(0));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, english, romaji);
+        return Objects.hash(id, english.get(0), romaji, kanji);
     }
 }
