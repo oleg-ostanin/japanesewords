@@ -1,6 +1,7 @@
 package com.github.olegostanin.japanesewords.service;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.widget.Button;
 import com.github.olegostanin.japanesewords.comparator.CorrectAnswersComparator;
 import com.github.olegostanin.japanesewords.comparator.OrderComparator;
@@ -49,7 +50,6 @@ public class MainActivityService {
     final List<WordModel> allWords = new ArrayList<>(6000);
     final List<WordModel> wordsToLearn = new ArrayList<>();
     final List<WordModel> learnedWords = new ArrayList<>();
-    final List<Integer> distributedIndex = new ArrayList<>();
     final Comparator<WordModel> correctAnswersComparator = new CorrectAnswersComparator();
     WordModel currentWord;
 
@@ -101,6 +101,10 @@ public class MainActivityService {
     }
 
     public void initModels() {
+        allWords.clear();
+        learnedWords.clear();
+        wordsToLearn.clear();
+
         wordStatMap = activityContext.getWordStatMapWrapper().getWordStatMap();
 
         for (WordCategory category : wordContainer.getCategories()) {
@@ -123,7 +127,6 @@ public class MainActivityService {
         for (int i = 0; wordsToLearn.size() < QUESTION_LIST_SIZE; i++) {
             final WordModel iWord = allWords.get(i);
             if (iWord.getCorrectAnswersInARow() <= LEARNED) {
-                addDistributedIndex(wordsToLearn.size());
                 wordsToLearn.add(allWords.get(i));
             }
             else {
@@ -131,20 +134,13 @@ public class MainActivityService {
             }
         }
 
-        activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
-    }
+        Collections.sort(wordsToLearn, correctAnswersComparator);
 
-    private void addDistributedIndex(int index) {
-        int num = 0;
-        if (index == 0) {
-            num = QUESTION_LIST_SIZE * 2;
-        }
-        else {
-            num = Math.max(1, QUESTION_LIST_SIZE / index);
-        }
-        for (int i = 0; i < num; i++) {
-            distributedIndex.add(index);
-        }
+//        for (WordModel wordModel : wordsToLearn) {
+//            Log.i("tag", wordModel.getEnglish().get(0));
+//        }
+
+        activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
     }
 
     public void handleAnswer(int buttonNum) {
@@ -236,8 +232,7 @@ public class MainActivityService {
     }
 
     private WordModel randomModel() {
-        final int distributed = ThreadLocalRandom.current().nextInt(distributedIndex.size());
-        final int modelIndex = distributedIndex.get(distributed);
+        final int modelIndex = indexProvider.getRandomIndex();
         return wordsToLearn.get(modelIndex);
     }
 

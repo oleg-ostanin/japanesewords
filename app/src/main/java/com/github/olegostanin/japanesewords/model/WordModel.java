@@ -119,7 +119,9 @@ public class WordModel {
         if (kanji != null && !kanji.isEmpty() && kanji.equals(model.kanji)) {
             return true;
         }
-        return id.equals(model.id) || romaji.equals(model.romaji) || english.get(0).equals(model.english.get(0));
+        return id.equals(model.id)
+                || (romaji != null && !romaji.isEmpty() && romaji.equals(model.romaji))
+                || english.get(0).equals(model.english.get(0));
     }
 
     @Override

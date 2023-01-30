@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         final MainActivityContext context = activityContext();
         service = new MainActivityService(context, wordContainer);
         service.initModels();
+//        service.setQuestionContext();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        readWordStatMap();
+        service.initModels();
         service.setQuestionContext();
     }
 
