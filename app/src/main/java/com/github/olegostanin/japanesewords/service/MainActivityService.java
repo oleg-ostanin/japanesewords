@@ -1,7 +1,6 @@
 package com.github.olegostanin.japanesewords.service;
 
 import android.graphics.Color;
-import android.util.Log;
 import android.widget.Button;
 import com.github.olegostanin.japanesewords.comparator.CorrectAnswersComparator;
 import com.github.olegostanin.japanesewords.comparator.OrderComparator;
@@ -35,7 +34,7 @@ public class MainActivityService {
     /**
      * Number of words in current question list.
      */
-    static final int QUESTION_LIST_SIZE = 200;
+    static final int QUESTION_LIST_SIZE = 50;
 
     final RandomIndexProvider indexProvider = new RandomIndexProvider(QUESTION_LIST_SIZE);
     final MainActivityContext activityContext;
@@ -124,12 +123,12 @@ public class MainActivityService {
 
         Collections.sort(allWords, new OrderComparator());
 
-        for (int i = 0; wordsToLearn.size() < QUESTION_LIST_SIZE; i++) {
+        for (int i = 0; i < allWords.size(); i++) {
             final WordModel iWord = allWords.get(i);
-            if (iWord.getCorrectAnswersInARow() <= LEARNED) {
-                wordsToLearn.add(allWords.get(i));
+            if (iWord.getCorrectAnswersInARow() <= LEARNED && wordsToLearn.size() < QUESTION_LIST_SIZE) {
+                wordsToLearn.add(iWord);
             }
-            else {
+            else if (iWord.getCorrectAnswersInARow() > LEARNED) {
                 learnedWords.add(iWord);
             }
         }
@@ -141,6 +140,11 @@ public class MainActivityService {
 //        }
 
         activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
+    }
+
+    public void cheat() {
+        currentWord.setCorrectAnswersInARow(LEARNED);
+        handleCorrectAnswer();
     }
 
     public void handleAnswer(int buttonNum) {
@@ -156,10 +160,9 @@ public class MainActivityService {
     private void handleCorrectAnswer() {
         if (currentWord.getLastAnswerCorrect()) {
             currentWord.incrementCorrectAnswersInARow();
+            putCurrentWordInWordStatMap();
             if (currentWord.getCorrectAnswersInARow() > LEARNED) {
-                wordsToLearn.remove(currentWord);
                 initModels();
-                learnedWords.add(currentWord);
                 activityContext.getLearnedWords().setText(String.valueOf(learnedWords.size()));
             }
         }
@@ -173,7 +176,6 @@ public class MainActivityService {
         currentWord.setCorrectAnswers(currentWord.getCorrectAnswers() + 1);
         rightCount++;
         activityContext.getRightCount().setText(String.valueOf(rightCount));
-        putCurrentWordInWordStatMap();
         setQuestionContext();
     }
 
@@ -223,15 +225,15 @@ public class MainActivityService {
     }
 
     private WordModel uniqueModel() {
-        WordModel toReturn = randomModel();
+        WordModel toReturn = model();
         while (frameWords.contains(toReturn)) {
-            toReturn = randomModel();
+            toReturn = model();
         }
         frameWords.add(toReturn);
         return toReturn;
     }
 
-    private WordModel randomModel() {
+    private WordModel model() {
         final int modelIndex = indexProvider.getRandomIndex();
         return wordsToLearn.get(modelIndex);
     }

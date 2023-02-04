@@ -21,15 +21,15 @@ public class RandomIndexProvider {
         while (startPointer < endPointer && bitPosition < binary.length()) {
             final double diff = endPointer - startPointer;
             final double toSubtract = diff / (1 + ThreadLocalRandom.current().nextDouble());
-            final double toAdd = diff - toSubtract;
-            final String bit = String.valueOf(binary.charAt(bitPosition));
-            if ("0".equals(bit)) {
+            if ('0' == binary.charAt(bitPosition)) {
+                final double toAdd = diff - toSubtract;
                 startPointer += toAdd;
             } else {
                 endPointer -= toSubtract;
             }
             bitPosition++;
         }
+
         int result = (int) Math.round(startPointer);
         while (result > questionListSize - 1) {
             result = getRandomIndex();

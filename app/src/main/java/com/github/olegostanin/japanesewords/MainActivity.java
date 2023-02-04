@@ -46,22 +46,22 @@ public class MainActivity extends AppCompatActivity {
         final MainActivityContext context = activityContext();
         service = new MainActivityService(context, wordContainer);
         service.initModels();
-//        service.setQuestionContext();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        readWordStatMap();
-        service.initModels();
         service.setQuestionContext();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        writeWordStatMap();
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        readWordStatMap();
+//        service.initModels();
+//        service.setQuestionContext();
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        writeWordStatMap();
+//    }
 
     @Override
     protected void onDestroy() {
@@ -112,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void cheat(View view) {
+        service.cheat();
     }
 
     public void romajiVisible(View view) {

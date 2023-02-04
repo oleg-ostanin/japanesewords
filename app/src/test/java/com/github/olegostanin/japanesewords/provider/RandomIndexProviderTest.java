@@ -7,8 +7,8 @@ public class RandomIndexProviderTest {
 
     @Test
     public void testGetRandomIndex() {
-        final RandomIndexProvider indexProvider = new RandomIndexProvider(200);
-        final int[] array = new int[200];
+        final RandomIndexProvider indexProvider = new RandomIndexProvider(8);
+        final int[] array = new int[8];
 
         for (int i = 0; i < 10000000; i++) {
             int index = indexProvider.getRandomIndex();
