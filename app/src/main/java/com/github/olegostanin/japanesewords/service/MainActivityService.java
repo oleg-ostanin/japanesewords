@@ -2,22 +2,14 @@ package com.github.olegostanin.japanesewords.service;
 
 import android.graphics.Color;
 import android.widget.Button;
-import com.github.olegostanin.japanesewords.comparator.CorrectAnswersComparator;
-import com.github.olegostanin.japanesewords.comparator.OrderComparator;
-import com.github.olegostanin.japanesewords.model.WordCategory;
 import com.github.olegostanin.japanesewords.model.WordModel;
-import com.github.olegostanin.japanesewords.model.WordStat;
-import com.github.olegostanin.japanesewords.provider.RandomIndexProvider;
 import com.github.olegostanin.japanesewords.сontext.MainActivityContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 @RequiredArgsConstructor
@@ -69,6 +61,7 @@ public class MainActivityService {
 
     public void cheat() {
         currentWord.setCorrectAnswersInARow(11L);
+        wordService.handleCorrectAnswer(currentWord);
         wordService.initModels();
         setQuestionContext();
     }

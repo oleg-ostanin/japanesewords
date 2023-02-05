@@ -1,9 +1,7 @@
 package com.github.olegostanin.japanesewords.service;
 
-import android.graphics.Color;
 import com.github.olegostanin.japanesewords.model.WordModel;
-import com.github.olegostanin.japanesewords.model.WordStat;
-import com.github.olegostanin.japanesewords.provider.RandomIndexProvider;
+import com.github.olegostanin.japanesewords.provider.RandomProvider;
 import com.github.olegostanin.japanesewords.сontext.WordContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +18,7 @@ import static com.github.olegostanin.japanesewords.service.LearningMode.NEW;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class WordService {
     final WordContext wordContext;
-    final RandomIndexProvider indexProvider = new RandomIndexProvider();
+    final RandomProvider randomProvider = new RandomProvider();
 
     final Queue<WordModel> mistakes = new LinkedList<>();
 
@@ -35,18 +33,22 @@ public class WordService {
     }
 
     public WordModel mistakeOrUnique(final List<Long> frameWords) {
-        if (mistakes.isEmpty() || 0 != ThreadLocalRandom.current().nextInt(3) ) {
+        if (!randomProvider.shouldLearnFromMistakes()) {
             return uniqueModel(frameWords);
         }
 
-        final WordModel toReturn = mistakes.poll();
-        if (!frameWords.contains(toReturn.getId())) {
-            frameWords.add(toReturn.getId());
-            return toReturn;
+        if (mistakes.isEmpty()) {
+            return uniqueModel(frameWords);
         }
-        else {
-            mistakes.add(toReturn);
+
+        final WordModel mistake = mistakes.poll();
+        if (mistake != null && !frameWords.contains(mistake.getId())) {
+            frameWords.add(mistake.getId());
+            return mistake;
+        } else {
+            mistakes.add(mistake);
         }
+
         return uniqueModel(frameWords);
     }
 
@@ -63,7 +65,7 @@ public class WordService {
         final List<WordModel> questionList = learningMode == NEW
                 ? wordContext.getNewWords()
                 : wordContext.getLearnedWords();
-        final int modelIndex = indexProvider.getRandomIndex(questionList.size());
+        final int modelIndex = randomProvider.getRandomIndex(questionList.size());
         return questionList.get(modelIndex);
     }
 
