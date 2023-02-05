@@ -6,19 +6,16 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-@RequiredArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
 public class RandomIndexProvider {
-    final int questionListSize;
 
-    public int getRandomIndex() {
+    public int getRandomIndex(final int questionListSize) {
         final long random = ThreadLocalRandom.current().nextLong();
         final String binary = Long.toBinaryString(random);
         double startPointer = 0;
         double endPointer = (questionListSize * 4) - 1;
         int bitPosition = 0;
 
-        while (startPointer < endPointer && bitPosition < binary.length()) {
+        while (startPointer < (endPointer - 1) && bitPosition < binary.length()) {
             final double diff = endPointer - startPointer;
             final double toSubtract = diff / (1 + ThreadLocalRandom.current().nextDouble());
             if ('0' == binary.charAt(bitPosition)) {
@@ -31,13 +28,13 @@ public class RandomIndexProvider {
         }
 
         int result = (int) Math.round(startPointer);
-        while (result > questionListSize - 1) {
-            result = getRandomIndex();
+        if (result > questionListSize - 1) {
+            result = 0;
         }
         return result;
     }
 
-    public int getRandomIndexOld() {
+    public int getRandomIndexOld(final int questionListSize) {
         final long random = ThreadLocalRandom.current().nextLong();
         final String binary = Long.toBinaryString(random);
         int startPointer = 0;

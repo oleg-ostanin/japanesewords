@@ -118,6 +118,10 @@ public class MainActivity extends AppCompatActivity {
         service.cheat();
     }
 
+    public void switchMode(View view) {
+        service.switchMode();
+    }
+
     public void romajiVisible(View view) {
         final Button romaji = (Button) findViewById(R.id.textView1);
         romaji.setTextColor(Color.BLACK);

@@ -11,7 +11,6 @@ public class WordModel {
     private List<String> english;
     private String romaji;
 
-    private Long correctAnswers = 0L;
     private Long correctAnswersInARow = 0L;
     private Long lastCorrectAnswerTs = 0L;
 
@@ -65,14 +64,6 @@ public class WordModel {
 
     public void setRomaji(String romaji) {
         this.romaji = romaji;
-    }
-
-    public Long getCorrectAnswers() {
-        return correctAnswers;
-    }
-
-    public void setCorrectAnswers(Long correctAnswers) {
-        this.correctAnswers = correctAnswers;
     }
 
     public Long getCorrectAnswersInARow() {
