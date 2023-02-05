@@ -28,7 +28,7 @@ public class RandomProviderTest {
             final double percentage = (double) hits / ((double) attempts / 100);
             total += percentage;
 
-            System.out.println(i + " : " + hits + " : " + percentage);
+            System.out.println(String.format("Index:%d; hits:%d; percentage:%s", i ,hits , percentage));
         }
 
         System.out.println(total);
