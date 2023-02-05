@@ -4,27 +4,24 @@ import android.graphics.Color;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.olegostanin.japanesewords.model.WordContainer;
-import com.github.olegostanin.japanesewords.model.WordStat;
 import com.github.olegostanin.japanesewords.model.WordStatMapWrapper;
 import com.github.olegostanin.japanesewords.service.MainActivityService;
 import com.github.olegostanin.japanesewords.сontext.MainActivityContext;
+import com.github.olegostanin.japanesewords.service.WordService;
+import com.github.olegostanin.japanesewords.сontext.WordContext;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,25 +40,13 @@ public class MainActivity extends AppCompatActivity {
         WordContainer wordContainer = readWordContainer();
         readWordStatMap();
 
-        final MainActivityContext context = activityContext();
-        service = new MainActivityService(context, wordContainer);
+        final MainActivityContext activityContext = activityContext();
+        final WordContext wordContext = new WordContext(wordContainer, wordStatMapWrapper);
+        final WordService wordService = new WordService(wordContext);
+        service = new MainActivityService(activityContext, wordService);
         service.initModels();
         service.setQuestionContext();
     }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        readWordStatMap();
-//        service.initModels();
-//        service.setQuestionContext();
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        writeWordStatMap();
-//    }
 
     @Override
     protected void onDestroy() {
