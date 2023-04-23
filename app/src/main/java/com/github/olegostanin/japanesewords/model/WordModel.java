@@ -121,7 +121,7 @@ public class WordModel {
         }
         return id.equals(model.id)
                 || (romaji != null && !romaji.isEmpty() && romaji.equals(model.romaji))
-                || english.get(0).equals(model.english.get(0));
+                || english.get(0).equalsIgnoreCase(model.english.get(0));
     }
 
     @Override
