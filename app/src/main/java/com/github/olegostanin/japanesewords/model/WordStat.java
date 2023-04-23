@@ -18,12 +18,17 @@ public class WordStat {
     private long a;
 
     /**
+     * Use level.
+     */
+    private long u;
+
+    /**
      * Timestamp of the last correct answer.
      */
     private long ts;
 
-    public static WordStat of(final long id, final long a, final long ts) {
-        return new WordStat(id, a, ts);
+    public static WordStat of(final long id, final long a, final long u, final long ts) {
+        return new WordStat(id, a, u, ts);
     }
 
 }

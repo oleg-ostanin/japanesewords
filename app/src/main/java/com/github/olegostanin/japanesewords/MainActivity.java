@@ -1,6 +1,9 @@
 package com.github.olegostanin.japanesewords;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
@@ -23,10 +26,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static android.os.Environment.DIRECTORY_DOCUMENTS;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String WORD_STAT_DIR = "/JapaneseWordStat";
     private static final String WORD_STAT_FILE = "japaneseWordStat.json";
+
+    private static final int PERMISSIONS_REQUEST = 1;
+    private static final String PERMISSION_WRITE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+    private static final String PERMISSION_READ = Manifest.permission.READ_EXTERNAL_STORAGE;
+
     private final ObjectMapper mapper = new ObjectMapper();
     MainActivityService service;
 
@@ -36,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (!hasPermissionWrite()) {
+            requestPermissionWrite();
+        }
+        if (!hasPermissionRead()) {
+            requestPermissionRead();
+        }
 
         WordContainer wordContainer = readWordContainer();
         readWordStatMap();
@@ -49,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        writeWordStatMap();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         writeWordStatMap();
@@ -56,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     private WordContainer readWordContainer() {
         try {
-            final InputStream ins = getResources().openRawResource(R.raw.japanesewords4999new);
+            final InputStream ins = getResources().openRawResource(R.raw.japanesewords4999sorted);
             return mapper.readValue(ins, WordContainer.class);
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,42 +88,110 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void readWordStatMap() {
-        try {
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File (sdCard.getAbsolutePath() + WORD_STAT_DIR);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            File storage = Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS);
+            File dir = new File(storage.getAbsolutePath() + WORD_STAT_DIR);
             File file = new File(dir, WORD_STAT_FILE);
 
             if(!file.exists()) {
                 wordStatMapWrapper = new WordStatMapWrapper(new HashMap<>());
                 return;
             }
+            try (FileInputStream f = new FileInputStream(file)) {
+                wordStatMapWrapper = mapper.readValue(f, WordStatMapWrapper.class);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            File sdCard = Environment.getExternalStorageDirectory();
+            File dir = new File(sdCard.getAbsolutePath() + WORD_STAT_DIR);
+            File file = new File(dir, WORD_STAT_FILE);
 
-            FileInputStream f = new FileInputStream(file);
+            if(!file.exists()) {
+                wordStatMapWrapper = new WordStatMapWrapper(new HashMap<>());
+                return;
+            }
+            try (FileInputStream f = new FileInputStream(file)) {
+                wordStatMapWrapper = mapper.readValue(f, WordStatMapWrapper.class);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    private boolean hasPermissionWrite() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return checkSelfPermission(PERMISSION_WRITE) == PackageManager.PERMISSION_GRANTED;
+        } else {
+            return true;
+        }
+    }
 
-            wordStatMapWrapper = mapper.readValue(f, WordStatMapWrapper.class);
+    private boolean hasPermissionRead() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return checkSelfPermission(PERMISSION_READ) == PackageManager.PERMISSION_GRANTED;
+        } else {
+            return true;
+        }
+    }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+    private void requestPermissionWrite() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (shouldShowRequestPermissionRationale(PERMISSION_WRITE)) {
+                Toast.makeText(
+                                MainActivity.this,
+                                "Write permission is required",
+                                Toast.LENGTH_LONG)
+                        .show();
+            }
+            requestPermissions(new String[] {PERMISSION_WRITE}, PERMISSIONS_REQUEST);
+        }
+    }
+
+    private void requestPermissionRead() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (shouldShowRequestPermissionRationale(PERMISSION_READ)) {
+                Toast.makeText(
+                                MainActivity.this,
+                                "Read permission is required",
+                                Toast.LENGTH_LONG)
+                        .show();
+            }
+            requestPermissions(new String[] {PERMISSION_READ}, PERMISSIONS_REQUEST);
         }
     }
 
     private void writeWordStatMap() {
-        try {
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File (sdCard.getAbsolutePath() + WORD_STAT_DIR);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            File storage = Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS);
+            File dir = new File(storage.getAbsolutePath() + WORD_STAT_DIR);
             dir.mkdirs();
             File file = new File(dir, WORD_STAT_FILE);
-
-            FileOutputStream f = new FileOutputStream(file);
-
-            mapper.writeValue(f, wordStatMapWrapper);
-        } catch (Exception e) {
-            e.printStackTrace();
+            try (FileOutputStream f = new FileOutputStream(file)) {
+                mapper.writeValue(f, wordStatMapWrapper);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            File sdCard = Environment.getExternalStorageDirectory();
+            File dir = new File(sdCard.getAbsolutePath() + WORD_STAT_DIR);
+            dir.mkdirs();
+            File file = new File(dir, WORD_STAT_FILE);
+            try (FileOutputStream f = new FileOutputStream(file)) {
+                mapper.writeValue(f, wordStatMapWrapper);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void cheat(View view) {
         service.cheat();
+    }
+
+    public void useLevel(View view) {
+        service.useLevel();
     }
 
     public void switchMode(View view) {
@@ -109,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void romajiVisible(View view) {
         final Button romaji = (Button) findViewById(R.id.textView1);
-        romaji.setTextColor(Color.BLACK);
+        romaji.setTextColor(Color.RED);
     }
 
     public void debugVisible(View view) {

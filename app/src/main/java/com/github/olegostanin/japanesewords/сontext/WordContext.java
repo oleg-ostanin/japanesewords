@@ -28,6 +28,11 @@ public class WordContext {
     static final long LEARNED = 9L;
 
     /**
+     * If use level of a model is more than defined the model will be added to the list
+     */
+    static final long USE_LEVEL = 0L;
+
+    /**
      * Number of words in current question list.
      */
     static final int QUESTION_LIST_SIZE = 50;
@@ -63,8 +68,27 @@ public class WordContext {
         Collections.sort(learnedWords, correctAnswersComparator);
     }
 
+    private boolean shouldBeAdded(final WordModel model) {
+        if (newWords.size() >= QUESTION_LIST_SIZE) {
+            return false;
+        }
+
+        if (model.getCorrectAnswersInARow() > LEARNED) {
+            return false;
+        }
+
+        if (model.getUseLevel() > USE_LEVEL) {
+            return false;
+        }
+
+        return true;
+    }
+
     public void putModelInWordStatMap(final WordModel model) {
-        final WordStat wordStat = WordStat.of(model.getId(), model.getCorrectAnswersInARow(),
+        final WordStat wordStat = WordStat.of(
+                model.getId(),
+                model.getCorrectAnswersInARow(),
+                model.getUseLevel(),
                 System.currentTimeMillis());
         wordStatMapWrapper.getWordStatMap().put(model.getId(), wordStat);
     }
@@ -82,6 +106,7 @@ public class WordContext {
                         continue;
                     }
                     model.setCorrectAnswersInARow(wordStat.getA());
+                    model.setUseLevel(wordStat.getU());
                     model.setLastCorrectAnswerTs(wordStat.getTs());
                 }
             }

@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class WordModel {
     private Long id;
+    private Long useLevel;
     private Long order;
     private String kana;
     private String kanji;
@@ -24,6 +25,14 @@ public class WordModel {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getUseLevel() {
+        return useLevel;
+    }
+
+    public void setUseLevel(Long useLevel) {
+        this.useLevel = useLevel;
     }
 
     public Long getOrder() {

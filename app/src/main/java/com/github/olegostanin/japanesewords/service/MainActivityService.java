@@ -66,6 +66,12 @@ public class MainActivityService {
         setQuestionContext();
     }
 
+    public void useLevel() {
+        final long currentUseLevel = currentWord.getUseLevel();
+        final long newUseLevel = currentUseLevel + 1;
+        currentWord.setUseLevel(newUseLevel);
+    }
+
     public void switchMode() {
         final LearningMode learningMode = wordService.switchMode();
         if (learningMode == LearningMode.REPEAT) {
